@@ -11,9 +11,10 @@ export const actions = {
     // eslint-disable-next-line no-unused-vars
     async login({ dispatch, commit }, { phone, password }) {
         try {
-            const result = await axios.post('/auth/login', {phone, password})
-            const {msg, error, data} = result.data;
-            if(error) {
+            const result = await axios.post('/auth/login', { phone, password })
+            const { msg, error, data } = result.data;
+            console.log(data)
+            if (error) {
                 dispatch('notification/error', msg, { root: true });
             }
             else {
@@ -21,7 +22,7 @@ export const actions = {
                 commit('loginSuccess', data);
                 router.push('/');
             }
-        }catch(err) {
+        } catch (err) {
             dispatch('notification/error', err.message, { root: true })
         }
     },
@@ -40,8 +41,8 @@ export const actions = {
     // register the user
     async registeruser({ dispatch, commit }, user) {
         const result = await axios.post('/auth/register', user)
-        const {msg, error, data} = result.data;
-        if(error) {
+        const { msg, error, data } = result.data;
+        if (error) {
             dispatch('notification/error', msg, { root: true });
         }
         else {
@@ -59,18 +60,18 @@ export const getters = {
     },
     token(state) {
         let token = ''
-        if(state.currentUser) {
+        if (state.currentUser) {
             token = state.currentUser.token
         }
-        
+
         return token
     },
     refreshToken(state) {
         let rftoken = ''
-        if(state.currentUser) {
+        if (state.currentUser) {
             rftoken = state.currentUser.refreshToken
         }
-        
+
         return rftoken
     }
 }

@@ -59,9 +59,12 @@ export default {
     <div class="wrapper wrapper-content">
       <div class="row animated fadeInRight mt-3">
         <div class="col-md-4">
-          <div class="ibox">
-            <div class="ibox-title" style="padding-right: 15px !important">
-              <h5>Chi tiết</h5>
+          <div class="card">
+            <div class="card-body">
+              <div class="card-title">
+
+              </div>
+              <div class="">
               <div class="" style="float: right">
                 <button class="btn btn-primary btn-xs editbtn" type="button">
                   Sửa thông tin
@@ -74,8 +77,8 @@ export default {
                   Đổi Pass <i class="fa fa-key" aria-hidden="true"></i>
                 </button>
               </div>
-            </div>
-            <div>
+              </div>
+              <h5>Chi tiết</h5>
               <div class="ibox-content profile-content">
                 <span id="name"
                   ><h4><strong>DEV-TU123</strong></h4></span
@@ -581,6 +584,8 @@ export default {
                   </form>
                 </div>
               </div>
+            </div>
+          </div>
             </div>
           </div>
         </div>

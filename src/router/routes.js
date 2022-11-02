@@ -18,6 +18,14 @@ export default [
     component: () => import("./views/user/userIn4"),
   },
   {
+    path: "/ecm",
+    name: "userIn4",
+    meta: {
+      authRequired: true,
+    },
+    component: () => import("./views/tables/basictable"),
+  },
+  {
     path: "/khach-hang",
     name: "MNUsers",
     meta: {
