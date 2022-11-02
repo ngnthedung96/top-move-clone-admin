@@ -13,7 +13,6 @@ export const actions = {
         try {
             const result = await axios.post('/auth/login', { phone, password })
             const { msg, error, data } = result.data;
-            console.log(data)
             if (error) {
                 dispatch('notification/error', msg, { root: true });
             }

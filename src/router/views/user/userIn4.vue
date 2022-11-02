@@ -8,7 +8,7 @@ import PageHeader from "@/components/page-header";
  */
 export default {
   page: {
-    title: "Account",
+    title: "Thông tin cá nhân",
     meta: [
       {
         name: "description",
@@ -64,7 +64,7 @@ export default {
               <div class="card-title">
 
               </div>
-              <div class="">
+              <div class="card-content">
               <div class="" style="float: right">
                 <button class="btn btn-primary btn-xs editbtn" type="button">
                   Sửa thông tin
@@ -79,9 +79,9 @@ export default {
               </div>
               </div>
               <h5>Chi tiết</h5>
-              <div class="ibox-content profile-content">
+              <div class="ibox-content profile-content mt-5" >
                 <span id="name"
-                  ><h4><strong>DEV-TU123</strong></h4></span
+                  ><h6><strong>DEV-TU123</strong></h6></span
                 >
                 <span id="project"
                   ><i class="fa fa-building" aria-hidden="true"></i
@@ -587,285 +587,295 @@ export default {
             </div>
           </div>
             </div>
+            <div class="col-md-8">
+              <div class="card">
+                <div class="card-body">
+                  <div class="card-title">
+    
+                  </div>
+                <div class="card-content">
+                  <div class="ibox-title">
+                  <h5>Bật/Tắt xác minh mật khẩu 2 lớp <small></small></h5>
+                </div>
+                <div class="ibox-content">
+                  <div class="row">
+                    <div class="col-sm-6 b-r">
+                      <form role="form" method="POST" id="form2FA">
+                        <div class="form-group mt-3">
+                          <!-- // khoatv edit for change ratio btn to toggle btn begin -->
+                          <div class="row">
+                            <h4 class="col">
+                              <strong>Xác minh mật khẩu 2 lớp</strong>
+                            </h4>
+                            <div class="col-auto">
+                              <div class="form-check form-switch">
+                                <input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                  role="switch"
+                                  id="flexSwitchCheckChecked"
+                                  checked
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="flexSwitchCheckChecked"
+                                  >Bật</label
+                                >
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <input
+                          type="hidden"
+                          id="au_2_f_hidden"
+                          name="authenticator"
+                        />
+                        <!-- // khoatv edit for change ratio btn to toggle btn end -->
+                        <div class="form-group mt-3">
+                          <input
+                            type="text"
+                            placeholder="Mã xác thực"
+                            class="form-control"
+                            required=""
+                            name="otp"
+                          />
+                        </div>
+                        <div class="form-group mt-3">
+                          <p id="msg_err_2fa"></p>
+                        </div>
+                        <div class="form-group mt-3">
+                          <button
+                            class="btn btn-sm btn-primary m-t-n-xs mb-3"
+                            type="submit"
+                            id="btn-2fa"
+                          >
+                            <strong>Xác nhận</strong>
+                          </button>
+                        </div>
+                      </form>
+                      <p>
+                        <strong> Chú ý:</strong> nếu chọn <strong>TẮT</strong> chúng
+                        tôi sẽ tạo ra mã QR Code mới do đó bạn cần quét lại mã QR
+                        Code
+                      </p>
+                    </div>
+                    <div class="col-sm-6">
+                      <h4>Ảnh QR Code</h4>
+                      <div>
+                        <p class="text-center">
+                          <img
+                            src="https://chart.googleapis.com/chart?chs=200x200&amp;chld=M|0&amp;cht=qr&amp;chl=otpauth%3A%2F%2Ftotp%2F0387170000%3Fsecret%3DAK4DOM56HEIC6PXG"
+                            alt=""
+                          />
+                        </p>
+                        <input
+                          type="text"
+                          readonly=""
+                          class="form-control"
+                          value="AK4DOM56HEIC6PXG"
+                        /><br />
+                        <span style="text-align: justify"
+                          ><strong>Hướng dẫn: </strong>để kích hoạt dịch vụ bảo mật
+                          2 lớp bạn cần quét mã QR Code bằng ứng dụng Google
+                          Authenticator trên thiết bị của bạn sau đó chọn
+                          <strong>BẬT</strong> nhập mã xác thực bấm xác thực để kích
+                          hoạt dịch vụ</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="col-md-8">
-          <div class="ibox">
-            <div class="ibox-title">
-              <h5>Bật/Tắt xác minh mật khẩu 2 lớp <small></small></h5>
-            </div>
-            <div class="ibox-content">
-              <div class="row">
-                <div class="col-sm-6 b-r">
-                  <form role="form" method="POST" id="form2FA">
+        <div class="row">
+          <div class="col-lg-12 mt-5">
+            <div class="card">
+              <div class="card-body">
+                <div class="ibox-content profile-content">
+                <div>
+                  <h4>Cấu hình tạo đơn</h4>
+                  <form role="form" id="formSettingOrders">
+                    <input type="hidden" name="user_id" value="1" />
                     <div class="form-group mt-3">
-                      <!-- // khoatv edit for change ratio btn to toggle btn begin -->
-                      <div class="row">
-                        <h4 class="col">
-                          <strong>Xác minh mật khẩu 2 lớp</strong>
-                        </h4>
-                        <div class="col-auto">
-                          <div class="form-check form-switch">
-                            <input
-                              class="form-check-input"
-                              type="checkbox"
-                              role="switch"
-                              id="flexSwitchCheckChecked"
-                              checked
-                            />
-                            <label
-                              class="form-check-label"
-                              for="flexSwitchCheckChecked"
-                              >Bật</label
-                            >
+                      <label>Người Nhận có được quyền xem/thử sản phẩm</label
+                      ><br />
+                      <select
+                        name="config_default"
+                        class="
+                          form-control
+                          custom-select
+                          select2-hidden-accessible
+                        "
+                        data-select2-id="6"
+                        tabindex="-1"
+                        aria-hidden="true"
+                      >
+                        <option value="1">
+                          Cho Xem Hàng Nhưng Không Cho Thử Hàng
+                        </option>
+                        <option value="2">Cho Thử Hàng</option>
+                        <option value="3" selected="" data-select2-id="8">
+                          Không Cho Xem Hàng
+                        </option>
+                      </select>
+                    </div>
+                    <div class="form-group mt-3 mt-3">
+                      <label>Ghi chú mặc định</label><br />
+                      <textarea
+                        class="form-control autosizeme"
+                        placeholder="Nhập khi chú mặc định tại đây"
+                        name="note_default"
+                        rows="3"
+                      >
+  giao nhanh</textarea
+                      >
+                    </div>
+                    <div class="row mt-3" style="font-size: 120%">
+                      <div class="col-6">
+                        <div class="form-group mt-3">
+                          <div class="row">
+                            <div class="col-md-6">
+                              <label>Hiển thị SĐT người nhận </label>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-check form-switch">
+                                <input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                  role="switch"
+                                  id="flexSwitchCheckChecked"
+                                  checked
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="flexSwitchCheckChecked"
+                                ></label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="form-group mt-3">
+                          <div class="row">
+                            <div class="col-md-6">
+                              <label>Hiển thị địa chỉ chi tiết người nhận</label>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-check form-switch">
+                                <input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                  role="switch"
+                                  id="flexSwitchCheckChecked"
+                                  checked
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="flexSwitchCheckChecked"
+                                ></label>
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <input
-                      type="hidden"
-                      id="au_2_f_hidden"
-                      name="authenticator"
-                    />
-                    <!-- // khoatv edit for change ratio btn to toggle btn end -->
                     <div class="form-group mt-3">
-                      <input
-                        type="text"
-                        placeholder="Mã xác thực"
-                        class="form-control"
-                        required=""
-                        name="otp"
-                      />
+                      <label>Người trả phí</label><br />
+                      <select
+                        name="payer_default"
+                        class="
+                          form-control
+                          custom-select
+                          select2-hidden-accessible
+                        "
+                        data-select2-id="9"
+                        tabindex="-1"
+                        aria-hidden="true"
+                      >
+                        <option value="1" selected="" data-select2-id="11">
+                          Shop trả
+                        </option>
+                        <option value="2">Khách trả</option>
+                      </select>
+                      <span style="color: #ed5565"
+                        >**LƯU Ý: chọn khách trả hệ thống sẽ cộng tiền cước vào
+                        COD khi lên đơn</span
+                      >
                     </div>
                     <div class="form-group mt-3">
-                      <p id="msg_err_2fa"></p>
+                      <label>Phương thức gửi hàng</label><br />
+                      <select
+                        name="type_pick_default"
+                        class="
+                          form-control
+                          custom-select
+                          select2-hidden-accessible
+                        "
+                        data-select2-id="12"
+                        tabindex="-1"
+                        aria-hidden="true"
+                      >
+                        <option value="1" data-select2-id="14">
+                          Lấy hàng tận nơi
+                        </option>
+                        <option value="2">Gửi hàng tại bưu cục</option>
+                      </select>
+                    </div>
+                    <div class="form-group mt-3">
+                      <label>Kiểu bill in</label>
+                      <select
+                        name="type_print"
+                        id="type_print"
+                        class="
+                          form-control
+                          custom-select
+                          select2-hidden-accessible
+                        "
+                        data-select2-id="type_print"
+                        tabindex="-1"
+                        aria-hidden="true"
+                      >
+                        <option value="0" selected="" data-select2-id="16">
+                          Khổ dọc
+                        </option>
+                        <option value="1">Khổ ngang</option>
+                      </select>
+                      <button
+                        type="button"
+                        id="previewPrint"
+                        class="btn btn-primary btn-sm mt-3"
+                      >
+                        <i class="fa fa-eye" aria-hidden="true"></i> Xem mẫu bill
+                      </button>
+                      <div id="divPrint"></div>
+                    </div>
+                    <div class="form-group mt-3">
+                      <p id="msg_err_setting"></p>
                     </div>
                     <div class="form-group mt-3">
                       <button
                         class="btn btn-sm btn-primary m-t-n-xs mb-3"
+                        style="float: right"
                         type="submit"
-                        id="btn-2fa"
+                        id="btn_setting"
                       >
-                        <strong>Xác nhận</strong>
+                        <strong>Lưu thay đổi</strong>
                       </button>
                     </div>
+  
+                    <div class="clearfix"></div>
                   </form>
-                  <p>
-                    <strong> Chú ý:</strong> nếu chọn <strong>TẮT</strong> chúng
-                    tôi sẽ tạo ra mã QR Code mới do đó bạn cần quét lại mã QR
-                    Code
-                  </p>
                 </div>
-                <div class="col-sm-6">
-                  <h4>Ảnh QR Code</h4>
-                  <div>
-                    <p class="text-center">
-                      <img
-                        src="https://chart.googleapis.com/chart?chs=200x200&amp;chld=M|0&amp;cht=qr&amp;chl=otpauth%3A%2F%2Ftotp%2F0387170000%3Fsecret%3DAK4DOM56HEIC6PXG"
-                        alt=""
-                      />
-                    </p>
-                    <input
-                      type="text"
-                      readonly=""
-                      class="form-control"
-                      value="AK4DOM56HEIC6PXG"
-                    /><br />
-                    <span style="text-align: justify"
-                      ><strong>Hướng dẫn: </strong>để kích hoạt dịch vụ bảo mật
-                      2 lớp bạn cần quét mã QR Code bằng ứng dụng Google
-                      Authenticator trên thiết bị của bạn sau đó chọn
-                      <strong>BẬT</strong> nhập mã xác thực bấm xác thực để kích
-                      hoạt dịch vụ</span
-                    >
-                  </div>
-                </div>
+              </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-md-6 mt-5">
-          <div class="ibox">
-            <div class="ibox-content profile-content">
-              <div>
-                <h4>Cấu hình tạo đơn</h4>
-                <form role="form" id="formSettingOrders">
-                  <input type="hidden" name="user_id" value="1" />
-                  <div class="form-group mt-3">
-                    <label>Người Nhận có được quyền xem/thử sản phẩm</label
-                    ><br />
-                    <select
-                      name="config_default"
-                      class="
-                        form-control
-                        custom-select
-                        select2-hidden-accessible
-                      "
-                      data-select2-id="6"
-                      tabindex="-1"
-                      aria-hidden="true"
-                    >
-                      <option value="1">
-                        Cho Xem Hàng Nhưng Không Cho Thử Hàng
-                      </option>
-                      <option value="2">Cho Thử Hàng</option>
-                      <option value="3" selected="" data-select2-id="8">
-                        Không Cho Xem Hàng
-                      </option>
-                    </select>
-                  </div>
-                  <div class="form-group mt-3 mt-3">
-                    <label>Ghi chú mặc định</label><br />
-                    <textarea
-                      class="form-control autosizeme"
-                      placeholder="Nhập khi chú mặc định tại đây"
-                      name="note_default"
-                      rows="3"
-                    >
-giao nhanh</textarea
-                    >
-                  </div>
-                  <div class="row mt-3" style="font-size: 120%">
-                    <div class="col-6">
-                      <div class="form-group mt-3">
-                        <div class="row">
-                          <div class="col-md-6">
-                            <label>Hiển thị SĐT người nhận </label>
-                          </div>
-                          <div class="col-md-6">
-                            <div class="form-check form-switch">
-                              <input
-                                class="form-check-input"
-                                type="checkbox"
-                                role="switch"
-                                id="flexSwitchCheckChecked"
-                                checked
-                              />
-                              <label
-                                class="form-check-label"
-                                for="flexSwitchCheckChecked"
-                              ></label>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-6">
-                      <div class="form-group mt-3">
-                        <div class="row">
-                          <div class="col-md-6">
-                            <label>Hiển thị địa chỉ chi tiết người nhận</label>
-                          </div>
-                          <div class="col-md-6">
-                            <div class="form-check form-switch">
-                              <input
-                                class="form-check-input"
-                                type="checkbox"
-                                role="switch"
-                                id="flexSwitchCheckChecked"
-                                checked
-                              />
-                              <label
-                                class="form-check-label"
-                                for="flexSwitchCheckChecked"
-                              ></label>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-group mt-3">
-                    <label>Người trả phí</label><br />
-                    <select
-                      name="payer_default"
-                      class="
-                        form-control
-                        custom-select
-                        select2-hidden-accessible
-                      "
-                      data-select2-id="9"
-                      tabindex="-1"
-                      aria-hidden="true"
-                    >
-                      <option value="1" selected="" data-select2-id="11">
-                        Shop trả
-                      </option>
-                      <option value="2">Khách trả</option>
-                    </select>
-                    <span style="color: #ed5565"
-                      >**LƯU Ý: chọn khách trả hệ thống sẽ cộng tiền cước vào
-                      COD khi lên đơn</span
-                    >
-                  </div>
-                  <div class="form-group mt-3">
-                    <label>Phương thức gửi hàng</label><br />
-                    <select
-                      name="type_pick_default"
-                      class="
-                        form-control
-                        custom-select
-                        select2-hidden-accessible
-                      "
-                      data-select2-id="12"
-                      tabindex="-1"
-                      aria-hidden="true"
-                    >
-                      <option value="1" data-select2-id="14">
-                        Lấy hàng tận nơi
-                      </option>
-                      <option value="2">Gửi hàng tại bưu cục</option>
-                    </select>
-                  </div>
-                  <div class="form-group mt-3">
-                    <label>Kiểu bill in</label>
-                    <select
-                      name="type_print"
-                      id="type_print"
-                      class="
-                        form-control
-                        custom-select
-                        select2-hidden-accessible
-                      "
-                      data-select2-id="type_print"
-                      tabindex="-1"
-                      aria-hidden="true"
-                    >
-                      <option value="0" selected="" data-select2-id="16">
-                        Khổ dọc
-                      </option>
-                      <option value="1">Khổ ngang</option>
-                    </select>
-                    <button
-                      type="button"
-                      id="previewPrint"
-                      class="btn btn-primary btn-sm mt-3"
-                    >
-                      <i class="fa fa-eye" aria-hidden="true"></i> Xem mẫu bill
-                    </button>
-                    <div id="divPrint"></div>
-                  </div>
-                  <div class="form-group mt-3">
-                    <p id="msg_err_setting"></p>
-                  </div>
-                  <div class="form-group mt-3">
-                    <button
-                      class="btn btn-sm btn-primary m-t-n-xs mb-3"
-                      style="float: right"
-                      type="submit"
-                      id="btn_setting"
-                    >
-                      <strong>Lưu thay đổi</strong>
-                    </button>
-                  </div>
-
-                  <div class="clearfix"></div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
       <div class="footer">
         <div class="float-right">
           <!-- <strong>Liên hệ: 0588285555 - Email: info@fastship.vn</strong> -->
@@ -874,6 +884,5 @@ giao nhanh</textarea
           <strong>Copyright By KSOFT</strong>
         </div>
       </div>
-    </div>
   </Layout>
 </template>

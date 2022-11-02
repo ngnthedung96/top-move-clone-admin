@@ -14317,5 +14317,9 @@ a {
     width: 0;
   }
 }
-
+.list-product .product-item__info {
+  border: 1px solid #c4c4c4;
+  border-radius: 8px;
+  /* max-width: 95% !important; */
+}
 /*# sourceMappingURL=bootstrap-rtl.min.css.map */

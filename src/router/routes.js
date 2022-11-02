@@ -18,12 +18,52 @@ export default [
     component: () => import("./views/user/userIn4"),
   },
   {
+    path: "/tao-don-le",
+    name: "order",
+    meta: {
+      authRequired: true,
+    },
+    component: () => import("./views/order/singleOrder"),
+  },
+  {
+    path: "/tao-don-excel",
+    name: "excelOrder",
+    meta: {
+      authRequired: true,
+    },
+    component: () => import("./views/order/excelOrder"),
+  },
+  {
+    path: "/tao-don-san-pham",
+    name: "proOrder",
+    meta: {
+      authRequired: true,
+    },
+    component: () => import("./views/order/proOrder"),
+  },
+  {
     path: "/ecm",
-    name: "userIn4",
+    name: "test",
     meta: {
       authRequired: true,
     },
     component: () => import("./views/tables/basictable"),
+  },
+  {
+    path: "/ecm1",
+    name: "test2",
+    meta: {
+      authRequired: true,
+    },
+    component: () => import("./views/dashboards/crypto/index"),
+  },
+  {
+    path: "/ecm2",
+    name: "test3",
+    meta: {
+      authRequired: true,
+    },
+    component: () => import("./views/ui/grid"),
   },
   {
     path: "/khach-hang",

@@ -105,6 +105,14 @@
         "customer": "Khách hàng"
       }
     },
+    "order": {
+      "text": "Tạo đơn hàng",
+      "list": {
+        "order": "Tạo đơn lẻ",
+        "excelOrder": "Tạo đơn Excel",
+        "proOrder": "Tạo đơn theo sản phẩm"
+      }
+    },
     "makeOrder": {
       "text": "Users and Roles",
       "list": {

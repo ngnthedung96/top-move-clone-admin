@@ -15,19 +15,44 @@ export const menuItems = [
                 id: 3,
                 label: 'menuitems.accounts.list.userIn4',
                 link: '/thong-tin-ca-nhan',
-                parentId: 1
+                parentId: 2
             },
             {
                 id: 4,
                 label: 'menuitems.accounts.list.count',
                 link: '/dashboard/saas',
-                parentId: 1
+                parentId: 2
             },
             {
                 id: 5,
                 label: 'menuitems.accounts.list.customer',
-                link: '/dashboard/crypto',
-                parentId: 1
+                link: '/khach-hang',
+                parentId: 2
+            }
+        ]
+    },
+    {
+        id: 6,
+        label: "menuitems.order.text",
+        icon: "bx-upload",
+        subItems: [
+            {
+                id: 7,
+                label: 'menuitems.order.list.order',
+                link: '/tao-don-le',
+                parentId: 6
+            },
+            {
+                id: 8,
+                label: 'menuitems.order.list.excelOrder',
+                link: '/tao-don-excel',
+                parentId: 6
+            },
+            {
+                id: 9,
+                label: 'menuitems.order.list.proOrder',
+                link: '/tao-don-san-pham',
+                parentId: 6
             }
         ]
     }
