@@ -36,3 +36,4 @@ export default {
     <RouterView />
   </div>
 </template>
+

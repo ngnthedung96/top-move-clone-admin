@@ -74,27 +74,25 @@ export default {
             this.logInWithPhone({
               phone: this.phone,
             })
-            // eslint-disable-next-line no-unused-vars
-            .then((token) => {
-              this.tryingToLogIn = false;
-              this.isAuthError = false;
-              // Redirect to the originally requested page, or to the home page
-              this.$router.push(
-                {
+              // eslint-disable-next-line no-unused-vars
+              .then((token) => {
+                this.tryingToLogIn = false;
+                this.isAuthError = false;
+                // Redirect to the originally requested page, or to the home page
+                this.$router.push({
                   name: "two-step-verification",
-                } 
-              );
-            })
-            .catch((error) => {
-              this.tryingToLogIn = false;
-              this.authError = error ? error : "";
-              this.isAuthError = true;
-            })
+                });
+              })
+              .catch((error) => {
+                this.tryingToLogIn = false;
+                this.authError = error ? error : "";
+                this.isAuthError = true;
+              })
           );
         } else if (process.env.VUE_APP_DEFAULT_AUTH === "authfack") {
           const { phone, password } = this;
           if (phone && password) {
-            console.log('run thoi')
+            console.log("run thoi");
             this.login({
               phone,
               password,
@@ -208,14 +206,14 @@ export default {
                 </div>
               </b-form-group>
               <b-form-checkbox
-                  class="form-check"
-                  id="customControlInline"
-                  name="checkbox-1"
-                  value="accepted"
-                  unchecked-value="not_accepted"
-                >
-                  Remember me
-                </b-form-checkbox>
+                class="form-check"
+                id="customControlInline"
+                name="checkbox-1"
+                value="accepted"
+                unchecked-value="not_accepted"
+              >
+                Remember me
+              </b-form-checkbox>
               <div class="mt-3 d-grid">
                 <b-button type="submit" variant="primary" class="btn-block"
                   >Log In</b-button
@@ -228,7 +226,12 @@ export default {
                   <li class="list-inline-item">
                     <a
                       href="javascript: void(0);"
-                      class="social-list-item bg-primary text-white border-primary"
+                      class="
+                        social-list-item
+                        bg-primary
+                        text-white
+                        border-primary
+                      "
                     >
                       <i class="mdi mdi-facebook"></i>
                     </a>
@@ -244,7 +247,12 @@ export default {
                   <li class="list-inline-item">
                     <a
                       href="javascript: void(0);"
-                      class="social-list-item bg-danger text-white border-danger"
+                      class="
+                        social-list-item
+                        bg-danger
+                        text-white
+                        border-danger
+                      "
                     >
                       <i class="mdi mdi-google"></i>
                     </a>
@@ -265,9 +273,7 @@ export default {
         <div class="mt-5 text-center">
           <p>
             Don't have an account ?
-            <router-link
-              to="/register"
-              class="fw-medium text-primary"
+            <router-link to="/register" class="fw-medium text-primary"
               >Signup now</router-link
             >
           </p>

@@ -94,20 +94,18 @@
     "menu": {
       "text": "Satistics"
     },
-    "dashboards": {
-      "text": "Dashboards",
-      "badge": "04",
+    "live": {
+      "text": "Tổng quan - LIVE"
+    },
+    "accounts": {
+      "text": "Tài khoản",
       "list": {
-        "default": "Default",
-        "saas": "Saas",
-        "crypto": "Crypto",
-        "blog": "Blog"
+        "userIn4": "Thông tin cá nhân",
+        "count": "Thống kê",
+        "customer": "Khách hàng"
       }
     },
-    "apps": {
-      "text": "Managers"
-    },
-    "userrole": {
+    "makeOrder": {
       "text": "Users and Roles",
       "list": {
         "user": "Users manager",

@@ -256,7 +256,7 @@ export const menuItems = [
                         id: 41,
                         label: 'menuitems.ecommerce.list.cart',
                         link: '/ecommerce/cart',
-                        parentId:36
+                        parentId: 36
                     },
                     {
                         id: 42,
@@ -407,7 +407,7 @@ export const menuItems = [
                 ]
             },
             {
-                id: 66, 
+                id: 66,
                 label: "menuitems.blog.text",
                 icon: "bx-detail",
                 subItems: [
@@ -666,7 +666,7 @@ export const menuItems = [
                         parentId: 101
                     },
                     {
-                        id:109,
+                        id: 109,
                         label: "menuitems.authentication.list.lockscreen-2",
                         link: "/auth/lock-screen-2",
                         parentId: 101

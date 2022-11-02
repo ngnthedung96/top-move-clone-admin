@@ -43,7 +43,7 @@ export default {
       flag: null,
       value: null,
       myVar: 1,
-      user: this.$store.state.authfack.user
+      user: this.$store.state.authfack.user,
     };
   },
   components: { simplebar },
@@ -645,7 +645,7 @@ export default {
               src="@/assets/images/users/avatar-1.jpg"
               alt="Header Avatar"
             />
-            <span class="d-none d-xl-inline-block ms-1">
+            <!-- <span class="d-none d-xl-inline-block ms-1">
               <div v-if="currentUser">
                {{ currentUser.userInfo.email }}
               </div>
@@ -653,7 +653,7 @@ export default {
                 {{ "user not found" }}
               </div>
               </span
-            >
+            > -->
             <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
           </template>
           <!-- item-->

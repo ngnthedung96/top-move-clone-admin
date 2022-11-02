@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import {BootstrapVue, IconsPlugin } from 'bootstrap-vue'
+import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import VueApexCharts from 'vue-apexcharts'
 import Vuelidate from 'vuelidate'
 import * as VueGoogleMaps from 'vue2-google-maps'
@@ -33,7 +33,7 @@ axios.interceptors.response.use(
   async (err) => {
     const refreshToken = store.getters['authfack/refreshToken'];
     const originalConfig = err.config;
-    
+
     if (originalConfig.url !== "/auth/login" && originalConfig.url !== "/auth/refresh" && err.response) {
       // Access Token was expired
       if (err.response.status === 401 && !originalConfig._retry) {
@@ -43,7 +43,7 @@ axios.interceptors.response.use(
             refreshToken: refreshToken,
           });
 
-          if(!rs.data.error) {
+          if (!rs.data.error) {
             const data = rs.data.data
             store.dispatch('authfack/refreshToken', data);
           }

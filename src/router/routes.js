@@ -7,7 +7,23 @@ export default [
     meta: {
       authRequired: true,
     },
-    component: () => import("./views/dashboards/default"),
+    component: () => import("./views/default"),
+  },
+  {
+    path: "/thong-tin-ca-nhan",
+    name: "userIn4",
+    meta: {
+      authRequired: true,
+    },
+    component: () => import("./views/user/userIn4"),
+  },
+  {
+    path: "/khach-hang",
+    name: "MNUsers",
+    meta: {
+      authRequired: true,
+    },
+    component: () => import("./views/user/MNUsers"),
   },
   {
     path: "/login",
@@ -86,14 +102,14 @@ export default [
 
         if (process.env.VUE_APP_DEFAULT_AUTH === "firebase") {
           store.dispatch("auth/logOut");
-        } 
+        }
         else {
           // run vao day
           store.dispatch("authfack/logout");
         }
 
         const authRequiredOnPreviousRoute = routeFrom.matched.some((route) =>
-            route.push("/login")
+          route.push("/login")
         );
         // Navigate back to previous page, or home as a fallback
         next(
