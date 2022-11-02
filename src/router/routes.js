@@ -131,6 +131,12 @@ export default [
     redirect: "404",
   },
   {
+    path: "/dashboard/saas",
+    name: "saas-dashboard",
+    meta: { authRequired: true },
+    component: () => import("./views/dashboards/saas/index"),
+  },
+  {
     path: "/dashboard/crypto",
     name: "crypto-dashboard",
     meta: { authRequired: true },
