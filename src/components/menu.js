@@ -55,5 +55,61 @@ export const menuItems = [
                 parentId: 6
             }
         ]
+    },
+    {
+        id: 10,
+        label: "menuitems.MNOrder.text",
+        icon: "bx-cart",
+        subItems: [
+            {
+                id: 11,
+                label: 'menuitems.MNOrder.list.MNOrder',
+                link: '/quan-li-don-hang',
+                parentId: 10
+            },
+            {
+                id: 12,
+                label: 'menuitems.MNOrder.list.resOrder',
+                link: '/quan-li-phan-hoi',
+                parentId: 10
+            },
+            {
+                id: 13,
+                label: 'menuitems.MNOrder.list.MNOrderByFile',
+                link: '/quan-li-don-hang-loat',
+                parentId: 10
+            },
+            {
+                id: 14,
+                label: 'menuitems.MNOrder.list.failOrder',
+                link: '/thong-bao-don-fail',
+                parentId: 10
+            },
+            {
+                id: 15,
+                label: 'menuitems.MNOrder.list.storeOrder',
+                link: '/kho-hang',
+                parentId: 10
+            }
+        ]
+    },
+    {
+        id: 16,
+        label: "menuitems.store.text",
+        icon: "bx-window",
+        subItems: [
+            {
+                id: 17,
+                label: 'menuitems.store.list.crePro',
+                link: '/them-san-pham',
+                parentId: 16
+            },
+            {
+                id: 18,
+                label: 'menuitems.store.list.MNOrder',
+                link: '/quan-li-phan-hoi',
+                parentId: 16
+            }
+        ]
     }
 ];

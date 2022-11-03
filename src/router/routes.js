@@ -42,6 +42,55 @@ export default [
     component: () => import("./views/order/proOrder"),
   },
   {
+    path: "/quan-li-don-hang",
+    name: "MNOrder",
+    meta: {
+      authRequired: true,
+    },
+    component: () => import("./views/MNOrder/MNOrder"),
+  },
+  {
+    path: "/quan-li-phan-hoi",
+    name: "resOrder",
+    meta: {
+      authRequired: true,
+    },
+    component: () => import("./views/MNOrder/resOrder"),
+  },
+  {
+    path: "/quan-li-don-hang-loat",
+    name: "fileOrder",
+    meta: {
+      authRequired: true,
+    },
+    component: () => import("./views/MNOrder/fileOrder"),
+  },
+  {
+    path: "/thong-bao-don-fail",
+    name: "noticOrder",
+    meta: {
+      authRequired: true,
+    },
+    component: () => import("./views/MNOrder/noticOrder"),
+  },
+  {
+    path: "/kho-hang",
+    name: "storeOrder",
+    meta: {
+      authRequired: true,
+    },
+    component: () => import("./views/MNOrder/storeOrder"),
+  },
+  {
+    path: "/them-san-pham",
+    name: "crePro",
+    meta: {
+      authRequired: true,
+    },
+    component: () => import("./views/store/crePro")
+  },
+
+  {
     path: "/ecm",
     name: "test",
     meta: {

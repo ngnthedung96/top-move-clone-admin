@@ -113,6 +113,23 @@
         "proOrder": "Tạo đơn theo sản phẩm"
       }
     },
+    "MNOrder": {
+      "text": "Quản lý đơn hàng",
+      "list": {
+        "MNOrder": "Quản lý đơn hàng",
+        "resOrder": "Quản lý phản hồi đơn hàng",
+        "MNOrderByFile": "Quản lý đơn hàng tạo theo file",
+        "failOrder": "Thông báo đơn fail",
+        "storeOrder": "Kho hàng"
+      }
+    },
+    "store": {
+      "text": "Kho sản phẩm",
+      "list": {
+        "crePro": "Tạo sản phẩm",
+        "MNOrder": "Quản lý sản phẩm"
+      }
+    },
     "makeOrder": {
       "text": "Users and Roles",
       "list": {
