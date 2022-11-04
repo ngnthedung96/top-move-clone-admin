@@ -127,7 +127,14 @@
       "text": "Kho sản phẩm",
       "list": {
         "crePro": "Tạo sản phẩm",
-        "MNOrder": "Quản lý sản phẩm"
+        "MNPro": "Quản lý sản phẩm"
+      }
+    },
+    "reconcilation": {
+      "text": "Đối soát",
+      "list": {
+        "old": "Phiếu đối soát cũ - Trước ngày 16/8",
+        "new": "Phiếu đối soát mới - Từ ngày 16/8"
       }
     },
     "makeOrder": {

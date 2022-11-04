@@ -89,6 +89,30 @@ export default [
     },
     component: () => import("./views/store/crePro")
   },
+  {
+    path: "/kho-san-pham",
+    name: "MNPro",
+    meta: {
+      authRequired: true,
+    },
+    component: () => import("./views/store/MNPro")
+  },
+  {
+    path: "/phieu-doi-soat",
+    name: "recoPage",
+    meta: {
+      authRequired: true,
+    },
+    component: () => import("./views/reconcilation/recoOld")
+  },
+  {
+    path: "/phieu-doi-soat-new",
+    name: "recoPageNew",
+    meta: {
+      authRequired: true,
+    },
+    component: () => import("./views/reconcilation/recoNew")
+  },
 
   {
     path: "/ecm",

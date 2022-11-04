@@ -25,7 +25,7 @@ export default {
       title: "Tạo đơn theo sản phẩm",
       items: [
         {
-          text: "Tạo đơn hàng",
+          text: "Kho sản phẩm",
           href: "#",
         },
         {
@@ -67,7 +67,7 @@ export default {
                   <a
                     href="thong-tin-ca-nhan#formSettingOrders"
                     target="_blank"
-                    class="btn btn-secondary btn-outline"
+                    class="btn btn-primary btn-outline"
                     title="Cài đặt tạo đơn"
                     ><i class="fa fa-cog" aria-hidden="true"></i> Cấu hình thêm
                     sản phẩm</a
@@ -94,7 +94,7 @@ export default {
                         <div>
                           <div class="row">
                             <div class="col-md-12">
-                              <div class="form-group">
+                              <div class="form-group mb-2">
                                 <div class="row">
                                   <div class="col-md-3">
                                     <label
@@ -115,7 +115,7 @@ export default {
                                   </div>
                                 </div>
                               </div>
-                              <div class="form-group">
+                              <div class="form-group mb-2">
                                 <div class="row">
                                   <div class="col-md-3">
                                     <label>
@@ -136,7 +136,7 @@ export default {
                                   </div>
                                 </div>
                               </div>
-                              <div class="form-group">
+                              <div class="form-group mb-2">
                                 <div class="row">
                                   <div class="col-md-3">
                                     <label>
@@ -157,7 +157,7 @@ export default {
                                   </div>
                                 </div>
                               </div>
-                              <div class="form-group">
+                              <div class="form-group mb-2">
                                 <div class="row">
                                   <div class="col-md-3">
                                     <label> Đơn vị sản phẩm</label>
@@ -176,7 +176,7 @@ export default {
                                   </div>
                                 </div>
                               </div>
-                              <div class="form-group">
+                              <div class="form-group mb-2">
                                 <div class="row">
                                   <div class="col-md-3">
                                     <label> Danh mục sản phẩm</label>
@@ -206,12 +206,19 @@ export default {
                                   </div>
                                 </div>
                               </div>
-                              <div class="form-group">
+                              <div class="form-group mb-2">
                                 <div class="row">
                                   <div class="col-md-3">
                                     <label>
                                       Tồn kho tối thiểu
-                                      <span class="badge-grey"
+                                      <span
+                                        class="
+                                          p-1
+                                          bg-secondary
+                                          text-white
+                                          rounded
+                                        "
+                                        style="font-size: 80%"
                                         >Không bắt buộc</span
                                       ></label
                                     >
@@ -226,7 +233,7 @@ export default {
                                   </div>
                                 </div>
                               </div>
-                              <div class="form-group">
+                              <div class="form-group mb-2">
                                 <div class="row">
                                   <div class="col-md-3">
                                     <label> Ghi chú kiểm tra sản phẩm</label>
@@ -250,7 +257,7 @@ export default {
                         <div>
                           <div class="row">
                             <div class="col-md-12">
-                              <div class="form-group">
+                              <div class="form-group mb-2">
                                 <div class="row">
                                   <div class="col-md-4">
                                     <label>
@@ -275,7 +282,7 @@ export default {
                                   </div>
                                 </div>
                               </div>
-                              <div class="form-group">
+                              <div class="form-group mb-2">
                                 <div class="row">
                                   <div class="col-md-4">
                                     <label> Giá bán sỉ</label>
@@ -294,12 +301,19 @@ export default {
                                   </div>
                                 </div>
                               </div>
-                              <div class="form-group">
+                              <div class="form-group mb-2">
                                 <div class="row">
                                   <div class="col-md-4">
                                     <label>
                                       Giá nhập
-                                      <span class="badge-grey"
+                                      <span
+                                        class="
+                                          p-1
+                                          bg-secondary
+                                          text-white
+                                          rounded
+                                        "
+                                        style="font-size: 80%"
                                         >Không bắt buộc</span
                                       ></label
                                     >
@@ -375,7 +389,7 @@ export default {
                         <div>
                           <div class="row">
                             <div class="col-md-12">
-                              <div class="form-group">
+                              <div class="form-group mb-2">
                                 <div class="row">
                                   <div class="col-md-3">
                                     <label> Quản lý theo</label>
@@ -421,7 +435,7 @@ export default {
                                 </div>
                               </div>
                               <div
-                                class="form-group date"
+                                class="form-group date mb-2"
                                 style="display: none"
                               >
                                 <div class="row">
@@ -450,7 +464,7 @@ export default {
                                 </div>
                               </div>
                               <div
-                                class="form-group date"
+                                class="form-group date mb-2"
                                 style="display: none"
                               >
                                 <div class="row">
@@ -478,7 +492,7 @@ export default {
                                   </div>
                                 </div>
                               </div>
-                              <div class="form-group">
+                              <div class="form-group mb-2">
                                 <div class="row">
                                   <div class="col-md-3">
                                     <label> Điều kiện lưu kho</label>
@@ -496,7 +510,7 @@ export default {
                                   </div>
                                 </div>
                               </div>
-                              <div class="form-group">
+                              <div class="form-group mb-2">
                                 <div class="row">
                                   <div class="col-md-3">
                                     <label> Vật liệu gia cố khi đóng gói</label
@@ -524,7 +538,7 @@ export default {
                                   </div>
                                 </div>
                               </div>
-                              <div class="form-group">
+                              <div class="form-group mb-2">
                                 <div class="row">
                                   <div class="col-md-3">
                                     <label> Vật liệu đóng gói</label>
@@ -566,17 +580,17 @@ export default {
                         <div>
                           <div class="row">
                             <div class="col-md-12">
-                              <div class="form-group">
+                              <div class="form-group mb-2">
                                 <div class="row">
                                   <div class="col-md-4">
                                     <label>
                                       Trọng lượng
                                       <span style="color: red"
                                         ><strong>[*]</strong></span
-                                      ><br /><small
-                                        >Trọng lượng sau đóng gói</small
                                       ></label
                                     >
+                                    <br />
+                                    <small>Trọng lượng sau đóng gói</small>
                                   </div>
                                   <div class="col-md-8">
                                     <input
@@ -593,14 +607,13 @@ export default {
                                   </div>
                                 </div>
                               </div>
-                              <div class="form-group">
+                              <div class="form-group mb-2">
                                 <div class="row">
                                   <div class="col-md-3">
-                                    <label>
-                                      Kích thước sản phẩm <br /><small
-                                        >Kích thước sản phẩm sau khi đóng
-                                        gói</small
-                                      ></label
+                                    <label> Kích thước sản phẩm </label>
+                                    <small
+                                      >Kích thước sản phẩm sau khi đóng
+                                      gói</small
                                     >
                                   </div>
                                   <div class="col-md-3">

@@ -106,9 +106,28 @@ export const menuItems = [
             },
             {
                 id: 18,
-                label: 'menuitems.store.list.MNOrder',
-                link: '/quan-li-phan-hoi',
+                label: 'menuitems.store.list.MNPro',
+                link: '/kho-san-pham',
                 parentId: 16
+            }
+        ]
+    },
+    {
+        id: 19,
+        label: "menuitems.reconcilation.text",
+        icon: "bx-credit-card",
+        subItems: [
+            {
+                id: 20,
+                label: 'menuitems.reconcilation.list.old',
+                link: '/phieu-doi-soat',
+                parentId: 19
+            },
+            {
+                id: 21,
+                label: 'menuitems.reconcilation.list.new',
+                link: '/phieu-doi-soat-new',
+                parentId: 19
             }
         ]
     }

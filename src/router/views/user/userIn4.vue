@@ -48,6 +48,29 @@ export default {
       earningStatus: true,
     };
   },
+  methods: {
+    showMsgBox() {
+      // check du lieu truoc
+      const h = this.$createElement;
+      this.$bvModal.msgBoxOk(
+        [
+          h("p", { class: ["text-center"] }, [" Đổi mật khẩu thành công "]),
+          h("h1", { class: ["text-center text-success"] }, [
+            h("b-icon-check-circle-fill", { class: ["bg-green"] }),
+          ]),
+        ],
+        {
+          title: "Đổi mật khẩu",
+          size: "sm",
+          buttonSize: "sm",
+          okVariant: "success",
+          headerClass: "p-2 border-bottom-0",
+          footerClass: "p-2 border-top-0",
+          centered: true,
+        }
+      );
+    },
+  },
 };
 </script>
 
@@ -61,25 +84,27 @@ export default {
         <div class="col-md-4">
           <div class="card">
             <div class="card-body">
-              <div class="card-title">
-
-              </div>
+              <div class="card-title"></div>
               <div class="card-content">
-              <div class="" style="float: right">
-                <button class="btn btn-primary btn-xs editbtn" type="button">
-                  Sửa thông tin
-                  <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                </button>
-                <button
-                  class="btn btn-danger btn-xs editbtn_pass"
-                  type="button"
-                >
-                  Đổi Pass <i class="fa fa-key" aria-hidden="true"></i>
-                </button>
-              </div>
+                <div class="" style="float: right">
+                  <b-button
+                    v-b-modal="'modal-edit-infor'"
+                    class="editbtn"
+                    variant="primary xs"
+                    >Sửa thông tin
+                    <b-icon-pencil></b-icon-pencil>
+                  </b-button>
+                  <b-button
+                    v-b-modal="'modal-edit-pass'"
+                    class="editbtn_pass"
+                    variant="danger xs"
+                    >Đổi Pass
+                    <b-icon-key rotate="125"></b-icon-key>
+                  </b-button>
+                </div>
               </div>
               <h5>Chi tiết</h5>
-              <div class="ibox-content profile-content mt-5" >
+              <div class="ibox-content profile-content mt-5">
                 <span id="name"
                   ><h6><strong>DEV-TU123</strong></h6></span
                 >
@@ -586,15 +611,13 @@ export default {
               </div>
             </div>
           </div>
-            </div>
-            <div class="col-md-8">
-              <div class="card">
-                <div class="card-body">
-                  <div class="card-title">
-    
-                  </div>
-                <div class="card-content">
-                  <div class="ibox-title">
+        </div>
+        <div class="col-md-8">
+          <div class="card">
+            <div class="card-body">
+              <div class="card-title"></div>
+              <div class="card-content">
+                <div class="ibox-title">
                   <h5>Bật/Tắt xác minh mật khẩu 2 lớp <small></small></h5>
                 </div>
                 <div class="ibox-content">
@@ -614,7 +637,6 @@ export default {
                                   type="checkbox"
                                   role="switch"
                                   id="flexSwitchCheckChecked"
-                                  checked
                                 />
                                 <label
                                   class="form-check-label"
@@ -654,9 +676,9 @@ export default {
                         </div>
                       </form>
                       <p>
-                        <strong> Chú ý:</strong> nếu chọn <strong>TẮT</strong> chúng
-                        tôi sẽ tạo ra mã QR Code mới do đó bạn cần quét lại mã QR
-                        Code
+                        <strong> Chú ý:</strong> nếu chọn
+                        <strong>TẮT</strong> chúng tôi sẽ tạo ra mã QR Code mới
+                        do đó bạn cần quét lại mã QR Code
                       </p>
                     </div>
                     <div class="col-sm-6">
@@ -675,214 +697,399 @@ export default {
                           value="AK4DOM56HEIC6PXG"
                         /><br />
                         <span style="text-align: justify"
-                          ><strong>Hướng dẫn: </strong>để kích hoạt dịch vụ bảo mật
-                          2 lớp bạn cần quét mã QR Code bằng ứng dụng Google
+                          ><strong>Hướng dẫn: </strong>để kích hoạt dịch vụ bảo
+                          mật 2 lớp bạn cần quét mã QR Code bằng ứng dụng Google
                           Authenticator trên thiết bị của bạn sau đó chọn
-                          <strong>BẬT</strong> nhập mã xác thực bấm xác thực để kích
-                          hoạt dịch vụ</span
+                          <strong>BẬT</strong> nhập mã xác thực bấm xác thực để
+                          kích hoạt dịch vụ</span
                         >
                       </div>
                     </div>
                   </div>
                 </div>
-                </div>
-                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-12 mt-5">
-            <div class="card">
-              <div class="card-body">
-                <div class="ibox-content profile-content">
-                <div>
-                  <h4>Cấu hình tạo đơn</h4>
-                  <form role="form" id="formSettingOrders">
-                    <input type="hidden" name="user_id" value="1" />
-                    <div class="form-group mt-3">
-                      <label>Người Nhận có được quyền xem/thử sản phẩm</label
-                      ><br />
-                      <select
-                        name="config_default"
-                        class="
-                          form-control
-                          custom-select
-                          select2-hidden-accessible
-                        "
-                        data-select2-id="6"
-                        tabindex="-1"
-                        aria-hidden="true"
-                      >
-                        <option value="1">
-                          Cho Xem Hàng Nhưng Không Cho Thử Hàng
-                        </option>
-                        <option value="2">Cho Thử Hàng</option>
-                        <option value="3" selected="" data-select2-id="8">
-                          Không Cho Xem Hàng
-                        </option>
-                      </select>
-                    </div>
-                    <div class="form-group mt-3 mt-3">
-                      <label>Ghi chú mặc định</label><br />
-                      <textarea
-                        class="form-control autosizeme"
-                        placeholder="Nhập khi chú mặc định tại đây"
-                        name="note_default"
-                        rows="3"
-                      >
-  giao nhanh</textarea
-                      >
-                    </div>
-                    <div class="row mt-3" style="font-size: 120%">
-                      <div class="col-6">
-                        <div class="form-group mt-3">
-                          <div class="row">
-                            <div class="col-md-6">
-                              <label>Hiển thị SĐT người nhận </label>
-                            </div>
-                            <div class="col-md-6">
-                              <div class="form-check form-switch">
-                                <input
-                                  class="form-check-input"
-                                  type="checkbox"
-                                  role="switch"
-                                  id="flexSwitchCheckChecked"
-                                  checked
-                                />
-                                <label
-                                  class="form-check-label"
-                                  for="flexSwitchCheckChecked"
-                                ></label>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-6">
-                        <div class="form-group mt-3">
-                          <div class="row">
-                            <div class="col-md-6">
-                              <label>Hiển thị địa chỉ chi tiết người nhận</label>
-                            </div>
-                            <div class="col-md-6">
-                              <div class="form-check form-switch">
-                                <input
-                                  class="form-check-input"
-                                  type="checkbox"
-                                  role="switch"
-                                  id="flexSwitchCheckChecked"
-                                  checked
-                                />
-                                <label
-                                  class="form-check-label"
-                                  for="flexSwitchCheckChecked"
-                                ></label>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="form-group mt-3">
-                      <label>Người trả phí</label><br />
-                      <select
-                        name="payer_default"
-                        class="
-                          form-control
-                          custom-select
-                          select2-hidden-accessible
-                        "
-                        data-select2-id="9"
-                        tabindex="-1"
-                        aria-hidden="true"
-                      >
-                        <option value="1" selected="" data-select2-id="11">
-                          Shop trả
-                        </option>
-                        <option value="2">Khách trả</option>
-                      </select>
-                      <span style="color: #ed5565"
-                        >**LƯU Ý: chọn khách trả hệ thống sẽ cộng tiền cước vào
-                        COD khi lên đơn</span
-                      >
-                    </div>
-                    <div class="form-group mt-3">
-                      <label>Phương thức gửi hàng</label><br />
-                      <select
-                        name="type_pick_default"
-                        class="
-                          form-control
-                          custom-select
-                          select2-hidden-accessible
-                        "
-                        data-select2-id="12"
-                        tabindex="-1"
-                        aria-hidden="true"
-                      >
-                        <option value="1" data-select2-id="14">
-                          Lấy hàng tận nơi
-                        </option>
-                        <option value="2">Gửi hàng tại bưu cục</option>
-                      </select>
-                    </div>
-                    <div class="form-group mt-3">
-                      <label>Kiểu bill in</label>
-                      <select
-                        name="type_print"
-                        id="type_print"
-                        class="
-                          form-control
-                          custom-select
-                          select2-hidden-accessible
-                        "
-                        data-select2-id="type_print"
-                        tabindex="-1"
-                        aria-hidden="true"
-                      >
-                        <option value="0" selected="" data-select2-id="16">
-                          Khổ dọc
-                        </option>
-                        <option value="1">Khổ ngang</option>
-                      </select>
-                      <button
-                        type="button"
-                        id="previewPrint"
-                        class="btn btn-primary btn-sm mt-3"
-                      >
-                        <i class="fa fa-eye" aria-hidden="true"></i> Xem mẫu bill
-                      </button>
-                      <div id="divPrint"></div>
-                    </div>
-                    <div class="form-group mt-3">
-                      <p id="msg_err_setting"></p>
-                    </div>
-                    <div class="form-group mt-3">
-                      <button
-                        class="btn btn-sm btn-primary m-t-n-xs mb-3"
-                        style="float: right"
-                        type="submit"
-                        id="btn_setting"
-                      >
-                        <strong>Lưu thay đổi</strong>
-                      </button>
-                    </div>
-  
-                    <div class="clearfix"></div>
-                  </form>
-                </div>
-              </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      <div class="footer">
-        <div class="float-right">
-          <!-- <strong>Liên hệ: 0588285555 - Email: info@fastship.vn</strong> -->
-        </div>
-        <div>
-          <strong>Copyright By KSOFT</strong>
         </div>
       </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12 mt-5">
+        <div class="card">
+          <div class="card-body">
+            <div class="ibox-content profile-content">
+              <div>
+                <h4>Cấu hình tạo đơn</h4>
+                <form role="form" id="formSettingOrders">
+                  <input type="hidden" name="user_id" value="1" />
+                  <div class="form-group mt-3">
+                    <label>Người Nhận có được quyền xem/thử sản phẩm</label
+                    ><br />
+                    <select
+                      name="config_default"
+                      class="
+                        form-control
+                        custom-select
+                        select2-hidden-accessible
+                      "
+                      data-select2-id="6"
+                      tabindex="-1"
+                      aria-hidden="true"
+                    >
+                      <option value="1">
+                        Cho Xem Hàng Nhưng Không Cho Thử Hàng
+                      </option>
+                      <option value="2">Cho Thử Hàng</option>
+                      <option value="3" selected="" data-select2-id="8">
+                        Không Cho Xem Hàng
+                      </option>
+                    </select>
+                  </div>
+                  <div class="form-group mt-3 mt-3">
+                    <label>Ghi chú mặc định</label><br />
+                    <textarea
+                      class="form-control autosizeme"
+                      placeholder="Nhập khi chú mặc định tại đây"
+                      name="note_default"
+                      rows="3"
+                    >
+  giao nhanh</textarea
+                    >
+                  </div>
+                  <div class="row mt-3" style="font-size: 120%">
+                    <div class="col-6">
+                      <div class="form-group mt-3">
+                        <div class="row">
+                          <div class="col-md-6">
+                            <label>Hiển thị SĐT người nhận </label>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="form-check form-switch">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                role="switch"
+                                id="flexSwitchCheckChecked"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="flexSwitchCheckChecked"
+                              ></label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="form-group mt-3">
+                        <div class="row">
+                          <div class="col-md-6">
+                            <label>Hiển thị địa chỉ chi tiết người nhận</label>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="form-check form-switch">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                role="switch"
+                                id="flexSwitchCheckChecked"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="flexSwitchCheckChecked"
+                              ></label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group mt-3">
+                    <label>Người trả phí</label><br />
+                    <select
+                      name="payer_default"
+                      class="
+                        form-control
+                        custom-select
+                        select2-hidden-accessible
+                      "
+                      data-select2-id="9"
+                      tabindex="-1"
+                      aria-hidden="true"
+                    >
+                      <option value="1" selected="" data-select2-id="11">
+                        Shop trả
+                      </option>
+                      <option value="2">Khách trả</option>
+                    </select>
+                    <span style="color: #ed5565"
+                      >**LƯU Ý: chọn khách trả hệ thống sẽ cộng tiền cước vào
+                      COD khi lên đơn</span
+                    >
+                  </div>
+                  <div class="form-group mt-3">
+                    <label>Phương thức gửi hàng</label><br />
+                    <select
+                      name="type_pick_default"
+                      class="
+                        form-control
+                        custom-select
+                        select2-hidden-accessible
+                      "
+                      data-select2-id="12"
+                      tabindex="-1"
+                      aria-hidden="true"
+                    >
+                      <option value="1" data-select2-id="14">
+                        Lấy hàng tận nơi
+                      </option>
+                      <option value="2">Gửi hàng tại bưu cục</option>
+                    </select>
+                  </div>
+                  <div class="form-group mt-3">
+                    <label>Kiểu bill in</label>
+                    <select
+                      name="type_print"
+                      id="type_print"
+                      class="
+                        form-control
+                        custom-select
+                        select2-hidden-accessible
+                      "
+                      data-select2-id="type_print"
+                      tabindex="-1"
+                      aria-hidden="true"
+                    >
+                      <option value="0" selected="" data-select2-id="16">
+                        Khổ dọc
+                      </option>
+                      <option value="1">Khổ ngang</option>
+                    </select>
+                    <button
+                      type="button"
+                      id="previewPrint"
+                      class="btn btn-primary btn-sm mt-3"
+                    >
+                      <i class="fa fa-eye" aria-hidden="true"></i> Xem mẫu bill
+                    </button>
+                    <div id="divPrint"></div>
+                  </div>
+                  <div class="form-group mt-3">
+                    <p id="msg_err_setting"></p>
+                  </div>
+                  <div class="form-group mt-3">
+                    <button
+                      class="btn btn-sm btn-primary m-t-n-xs mb-3"
+                      style="float: right"
+                      type="submit"
+                      id="btn_setting"
+                    >
+                      <strong>Lưu thay đổi</strong>
+                    </button>
+                  </div>
+
+                  <div class="clearfix"></div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Trigger the modal with a button -->
+    <div class="modal">
+      <b-modal id="modal-edit-infor" hide-header hide-footer>
+        <div class="modal-header flex-column">
+          <h4 class="modal-title mb-3">Sửa thông tin cá nhân</h4>
+          <div class="alert alert-danger" style="color: black">
+            Khi thay đổi vui lòng nhập mã xác thực. Nếu chưa kích hoạt mã xác
+            thực hãy nhập mật khẩu để hoàn tất việc thay đổi
+          </div>
+        </div>
+        <div class="modal-body">
+          <form name="editUser" id="editUser">
+            <input type="hidden" value="1" id="update_id" name="update_id" />
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <div class="row">
+                    <div class="col-md-3">
+                      <label>Tên </label>
+                    </div>
+                    <div class="col-md-9">
+                      <input
+                        placeholder="Nhập tên "
+                        required=""
+                        type="text"
+                        class="form-control res2"
+                        name="name_update"
+                        value="DEV-TU123"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="row">
+                    <div class="col-md-3">
+                      <label>Tên Shop/ Công ty </label>
+                    </div>
+                    <div class="col-md-9">
+                      <input
+                        placeholder="Nhập tên shop/cty"
+                        required=""
+                        type="text"
+                        class="form-control res2"
+                        name="project_update"
+                        value="TestApp"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="row">
+                    <div class="col-md-3">
+                      <label>SĐT</label>
+                    </div>
+                    <div class="col-md-9">
+                      <input
+                        placeholder="Nhập SĐT..."
+                        required=""
+                        type="text"
+                        class="form-control"
+                        value="0387170000"
+                        name="phone_update"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="row">
+                    <div class="col-md-3">
+                      <label>Email </label>
+                    </div>
+                    <div class="col-md-9">
+                      <input
+                        placeholder="Nhập email..."
+                        required=""
+                        type="text"
+                        class="form-control"
+                        value="anhtu123@gmail.com"
+                        name="email_update"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="row">
+                    <div class="col-md-3">
+                      <label>Nhập mật khẩu </label>
+                    </div>
+                    <div class="col-md-9">
+                      <input
+                        placeholder="Nhập mật khẩu..."
+                        required=""
+                        type="password"
+                        class="form-control"
+                        id="password"
+                        name="password"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <label id="msg_err2"></label><br />
+            <div style="float: right">
+              <button
+                class="btn btn-primary"
+                @click="
+                  showMsgBox();
+                  $bvModal.hide('modal-edit-infor');
+                "
+                id="btn_w"
+              >
+                Cập nhật
+              </button>
+              <button
+                type="button"
+                class="btn btn-white"
+                id="close"
+                @click="$bvModal.hide('modal-edit-infor')"
+              >
+                Đóng
+              </button>
+            </div>
+          </form>
+        </div>
+      </b-modal>
+      <b-modal id="modal-edit-pass" hide-header hide-footer>
+        <div class="modal-header">
+          <h4 class="modal-title">Đổi mật khẩu</h4>
+        </div>
+        <div class="modal-body">
+          <form name="editUser" id="editUser">
+            <input type="hidden" value="1" id="update_id" name="update_id" />
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group mb-3">
+                  <div class="row">
+                    <div class="col-md-3">
+                      <label>Mật Khẩu Cũ </label>
+                    </div>
+                    <div class="col-md-9">
+                      <input
+                        placeholder="Mật Khẩu Cũ "
+                        required=""
+                        type="password"
+                        class="form-control"
+                        name="old_pass"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="row">
+                    <div class="col-md-3">
+                      <label>Mật Khẩu Mới</label>
+                    </div>
+                    <div class="col-md-9">
+                      <input
+                        placeholder="Mật Khẩu Mới"
+                        required=""
+                        type="password"
+                        class="form-control"
+                        name="new_pass"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <label id="msg_err3"></label><br />
+            <div style="float: right">
+              <button
+                @click.prevent="
+                  showMsgBox();
+                  $bvModal.hide('modal-edit-pass');
+                "
+                class="btn btn-primary"
+                id="btn_wp"
+              >
+                Cập nhật
+              </button>
+              <button
+                type="button"
+                class="btn btn-white"
+                id="close"
+                data-dismiss="modal"
+                @click="$bvModal.hide('modal-edit-pass')"
+              >
+                Đóng
+              </button>
+            </div>
+          </form>
+        </div>
+      </b-modal>
+    </div>
   </Layout>
 </template>

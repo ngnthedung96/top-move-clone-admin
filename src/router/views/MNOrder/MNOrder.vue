@@ -478,47 +478,38 @@ export default {
                         </button>
                       </div>
                     </div>
-                    <div class="float-right" style="float: right; width: 19%">
-                      <div class="dataTables_length" id="dt_orders_length">
-                        <div class="d-flex flex-row" style="position: relative">
-                          <p
-                            class="d-inline"
-                            style="
-                              width: 70%;
-                              position: absolute;
-                              top: 50%;
-                              left: 0%;
-                              transform: translate(-35%, -50%);
-                            "
-                          >
-                            Hiển thị
-                          </p>
-                          <select
-                            name="dt_orders_length"
-                            aria-controls="dt_orders"
-                            class="
-                              custom-select custom-select-sm
-                              form-control form-control-sm
-                              d-inline
-                            "
-                          >
-                            <option value="25">25</option>
-                            <option value="50">50</option>
-                            <option value="100">100</option>
-                            <option value="200">200</option>
-                          </select>
-                          <p
-                            class="d-inline ms-1"
-                            style="
-                              width: 110%;
-                              position: relative;
-                              bottom: -6px;
-                              right: 0.5%;
-                            "
-                          >
-                            đơn hàng
-                          </p>
-                        </div>
+                    <div style="float: right; width: 15%">
+                      <div
+                        class="
+                          dataTables_length
+                          d-flex
+                          flex-row
+                          justify-content-around
+                        "
+                        id="dt_orders_length"
+                      >
+                        <span class="d-flex flex-column justify-content-center"
+                          >Hiển thị
+                        </span>
+                        <select
+                          name="dt_orders_length"
+                          aria-controls="dt_orders"
+                          class="
+                            custom-select custom-select-sm
+                            form-control form-control-sm
+                          "
+                          style="width: 18%"
+                        >
+                          <option value="25">25</option>
+                          <option value="50">50</option>
+                          <option value="100">100</option>
+                          <option value="200">200</option>
+                        </select>
+                        <span
+                          class="d-flex flex-column justify-content-center"
+                          style="width: 44%"
+                          >đơn hàng</span
+                        >
                       </div>
                     </div>
                     <div
