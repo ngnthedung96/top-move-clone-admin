@@ -94,25 +94,6 @@ export const menuItems = [
         ]
     },
     {
-        id: 16,
-        label: "menuitems.store.text",
-        icon: "bx-window",
-        subItems: [
-            {
-                id: 17,
-                label: 'menuitems.store.list.crePro',
-                link: '/them-san-pham',
-                parentId: 16
-            },
-            {
-                id: 18,
-                label: 'menuitems.store.list.MNPro',
-                link: '/kho-san-pham',
-                parentId: 16
-            }
-        ]
-    },
-    {
         id: 19,
         label: "menuitems.reconcilation.text",
         icon: "bx-credit-card",

@@ -237,8 +237,6 @@ export default {
                       ></a
                     >
                   </li>
-                  <!-- <li><a  id="agr"><i class="fa fa-handshake-o" aria-hidden="true"></i></i> Đồng thuận <span class="label label-danger float-right" >0</span></a></li>
-<li><a  id="un_agr"><i class="fa fa-ban" aria-hidden="true"></i></i> Không đồng thuận<span class="label label-muted float-right" ></span></a></li> -->
                 </ul>
                 <div class="clearfix"></div>
               </div>
@@ -347,21 +345,13 @@ export default {
                         >Disabled action</b-dropdown-item
                       >
                     </b-dropdown>
-
-                    <button
-                      class="
-                        m-1
-                        btn btn-success btn-sm
-                        export_excel_order_by_codes
-                      "
-                      data-style="zoom-in"
-                      data-toggle="tooltip"
-                      data-placement="top"
-                      title=""
-                      data-original-title=""
+                    <b-button
+                      v-b-modal="'modal-edit-print'"
+                      class="export_excel_order_by_codes"
+                      variant="success btn-sm "
                     >
                       Xuất Excel theo đơn
-                    </button>
+                    </b-button>
                   </div>
                 </div>
                 <div class="mail-box">
@@ -418,6 +408,43 @@ export default {
           </div>
         </div>
       </div>
+    </div>
+    <div class="modal">
+      <b-modal id="modal-edit-print" hide-header hide-footer>
+        <div class="modal-header justify-content-center">
+          <h4 class="modal-title d-flex justify-content-center">
+            Xuất Excel đơn hàng
+          </h4>
+        </div>
+        <div class="modal-body">
+          <!--                <form name="input_print_order" method="post" id="print_order_by_order_codes">-->
+          <!--                    <div id="">-->
+          <textarea
+            class="form-control order_codes"
+            rows="8"
+            placeholder="Nhập mã đơn hàng tại đây..."
+            style="font-size: 15px"
+          ></textarea>
+          <!--                    </div>-->
+          <div style="float: right" class="mt-3">
+            <button
+              class="btn btn-primary"
+              @click="$bvModal.hide('modal-edit-print')"
+              id="btn_w"
+            >
+              Xuất đơn hàng
+            </button>
+            <button
+              type="button"
+              class="btn btn-white"
+              id="close"
+              @click="$bvModal.hide('modal-edit-print')"
+            >
+              Đóng
+            </button>
+          </div>
+        </div>
+      </b-modal>
     </div>
   </Layout>
 </template>

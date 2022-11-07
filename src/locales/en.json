@@ -123,13 +123,6 @@
         "storeOrder": "Kho hàng"
       }
     },
-    "store": {
-      "text": "Kho sản phẩm",
-      "list": {
-        "crePro": "Tạo sản phẩm",
-        "MNPro": "Quản lý sản phẩm"
-      }
-    },
     "reconcilation": {
       "text": "Đối soát",
       "list": {

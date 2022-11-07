@@ -169,7 +169,7 @@ export default {
               <h2 class="card-title">Quản lý phản hồi đơn hàng</h2>
               <div class="float-left mail-search" style="float: left">
                 <button
-                  class="form-control buttons-excel btn btn-outline btn-primary"
+                  class="form-control buttons-excel btn btn-outline btn-success"
                   name="export_excel"
                 >
                   <i class="fa fa-file-excel" aria-hidden="true"></i> Xuất Excel
@@ -178,93 +178,15 @@ export default {
 
               <div class="row conditional" style="float: right">
                 <div class="col-lg-12">
-                  <ul class="navbar-nav d-flex flex-row justify-content-around">
-                    <li
-                      class="nav-item px-2 py-1 me-2"
-                      style="cursor: pointer"
-                      id="filter_0"
-                    >
-                      <a
-                        ><span>Tất cả</span
-                        ><span
-                          class="px-2 py-1 bg-primary ms-2 rounded text-white"
-                          id="notification_0"
-                          >2</span
-                        ></a
-                      >
-                    </li>
-                    <li
-                      class="nav-item px-2 py-1 me-2"
-                      style="cursor: pointer"
-                      id="filter_CHANGE_COD"
-                    >
-                      <a
-                        ><span>Sửa COD</span
-                        ><span
-                          class="px-2 py-1 bg-primary ms-2 rounded text-white"
-                          id="notification_CHANGE_COD"
-                          >1</span
-                        ></a
-                      >
-                    </li>
-                    <li
-                      class="nav-item px-2 py-1 me-2"
-                      style="cursor: pointer"
-                      id="filter_CHANGE_RECEIVE"
-                    >
-                      <a
-                        ><span>Sửa người nhận</span
-                        ><span
-                          class="px-2 py-1 bg-primary ms-2 rounded text-white"
-                          id="notification_CHANGE_RECEIVE"
-                          >1</span
-                        ></a
-                      >
-                    </li>
-                    <li
-                      class="nav-item px-2 py-1 me-2"
-                      style="cursor: pointer"
-                      id="filter_COMPLAIN"
-                    >
-                      <a
-                        ><span>Khiểu nại</span
-                        ><span class="badge" id="notification_COMPLAIN"></span
-                      ></a>
-                    </li>
-                    <li
-                      class="nav-item px-3 py-1 me-2"
-                      id="filter_RESEND"
-                      style="border-bottom: 0px; color: rgb(1, 1, 1)"
-                    >
-                      <a
-                        ><span>Phát lại</span
-                        ><span class="badge" id="notification_RESEND"></span
-                      ></a>
-                    </li>
-                    <li
-                      class="nav-item px-2 py-1 me-2"
-                      style="cursor: pointer"
-                      id="filter_RETURN_ORDER"
-                    >
-                      <a
-                        ><span>Hoàn đơn</span
-                        ><span
-                          class="badge"
-                          id="notification_RETURN_ORDER"
-                        ></span
-                      ></a>
-                    </li>
-                    <li
-                      class="nav-item px-2 py-1 me-2"
-                      style="cursor: pointer"
-                      id="filter_ORTHER"
-                    >
-                      <a
-                        ><span>Khác</span
-                        ><span class="badge" id="notification_ORTHER"></span
-                      ></a>
-                    </li>
-                  </ul>
+                  <b-tabs pills>
+                    <b-tab title="Tất cả"></b-tab>
+                    <b-tab title="Sửa COD"></b-tab>
+                    <b-tab title="Sửa người nhận"></b-tab>
+                    <b-tab title="Khiếu nại"></b-tab>
+                    <b-tab title="Phát lại"></b-tab>
+                    <b-tab title="Hoàn đơn"></b-tab>
+                    <b-tab title="Khác"></b-tab>
+                  </b-tabs>
                 </div>
               </div>
             </div>

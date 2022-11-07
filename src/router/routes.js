@@ -74,30 +74,6 @@ export default [
     component: () => import("./views/MNOrder/noticOrder"),
   },
   {
-    path: "/kho-hang",
-    name: "storeOrder",
-    meta: {
-      authRequired: true,
-    },
-    component: () => import("./views/MNOrder/storeOrder"),
-  },
-  {
-    path: "/them-san-pham",
-    name: "crePro",
-    meta: {
-      authRequired: true,
-    },
-    component: () => import("./views/store/crePro")
-  },
-  {
-    path: "/kho-san-pham",
-    name: "MNPro",
-    meta: {
-      authRequired: true,
-    },
-    component: () => import("./views/store/MNPro")
-  },
-  {
     path: "/phieu-doi-soat",
     name: "recoPage",
     meta: {
