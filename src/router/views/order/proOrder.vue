@@ -2,7 +2,19 @@
 import Layout from "../../layouts/main.vue";
 import appConfig from "@/app.config";
 import PageHeader from "@/components/page-header";
+function getParent(el, parentEl) {
+  var parentEl;
+  var element = el.parentElement;
+  while (element) {
+    if (element.matches(`${parentEl}`)) {
+      parentEl = element;
+      break;
+    }
+    element = element.parentElement;
+  }
 
+  return parentEl;
+}
 /**
  * Dashboard Component
  */
@@ -21,7 +33,7 @@ export default {
     PageHeader,
   },
   data() {
-    return {
+    return {productIn4: [],
       title: "Tạo đơn theo sản phẩm",
       items: [
         {
@@ -47,6 +59,26 @@ export default {
       fetchingStats: true,
       earningStatus: true,
     };
+  },methods: {
+    addRow(e) {
+      const parentEl = getParent(e.target, ".product-item");
+      //   const btnAddRow = document.querySelectorAll(".add-row");
+      const nameDiv = parentEl.querySelector("#name-product");
+      const weightDiv = parentEl.querySelector("#weight-product");
+      const quantityDiv = parentEl.querySelector("#quantity-product");
+      const priceDiv = parentEl.querySelector("#price-product");
+      const name = nameDiv.value;
+      const weight = weightDiv.value;
+      const quantity = quantityDiv.value;
+      const price = priceDiv.value;
+      if (name && weight && quantity && price) {
+        this.productIn4.push({ name, weight, quantity, price });
+      }
+    },
+    deleteRow(key) {
+      console.log(key);
+      this.productIn4.splice(key, 1);
+    },
   },
 };
 </script>
@@ -342,15 +374,140 @@ export default {
                                           >
                                             <input
                                               type=""
-                                              name="product[]"
-                                              required=""
+                                              required
                                               size="60"
-                                              class="
-                                                g-input g-input--noBorder
-                                                product_target
-                                                form-control
-                                              "
+                                              id="name-product"
+                                              class="form-control"
                                               placeholder="Nhập tên sản phẩm"
+                                            />
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div
+                                      class="
+                                        product-extra__info
+                                        mt-2
+                                        d-flex
+                                        flex-row
+                                      "
+                                    >
+                                      <div class="product-weight me-2">
+                                        <span style="width: 100%">KL (kg)</span>
+                                        <div class="g-select__wrapper t-flex-1">
+                                          <div class="input__wrapper">
+                                            <div
+                                              class="
+                                                g-input__wrapper
+                                                g-select__input
+                                              "
+                                              type="text"
+                                            >
+                                              <input
+                                                type=""
+                                                value="0.1"
+                                                id="weight-product"
+                                                class="form-control"
+                                              />
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="product-weight-quantity me-2">
+                                        <span style="width: 100%">SL</span>
+                                        <div class="g-select__wrapper t-flex-1">
+                                          <div class="input__wrapper">
+                                            <div
+                                              class="
+                                                g-input__wrapper
+                                                g-select__input
+                                              "
+                                              type="text"
+                                            >
+                                              <input
+                                                type=""
+                                                id="quantity-product"
+                                                value="1"
+                                                class="form-control"
+                                              />
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="product-price-new me-2">
+                                        <span style="width: 100%">Giá</span>
+                                        <div class="g-select__wrapper t-flex-1">
+                                          <div class="input__wrapper">
+                                            <div
+                                              class="
+                                                g-input__wrapper
+                                                g-select__input
+                                              "
+                                              type="text"
+                                            >
+                                              <input
+                                                type=""
+                                                id="price-product"
+                                                class="form-control"
+                                                value="0"
+                                              />
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div
+                                    class="product-item__action"
+                                    style="position: relative"
+                                  >
+                                    <button
+                                      type="button"
+                                      @click="addRow($event)"
+                                      class="
+                                        btn btn-outline-primary
+                                        add-row
+                                        ms-1
+                                      "
+                                      style="height: 100%"
+                                    >
+                                      +
+                                    </button>
+                                  </div>
+                                </div>
+                                <div
+                                  class="product-item input-group mt-3"
+                                  v-for="(product, index) in productIn4"
+                                  :key="index"
+                                >
+                                  <div class="product-item__info form-control">
+                                    <div class="product-name-new">
+                                      <span class="name_product"
+                                        >Tên sản phẩm:
+                                      </span>
+                                      <div
+                                        class="
+                                          g-select__wrapper
+                                          t-flex-grow
+                                          static
+                                        "
+                                        inputid="productName"
+                                      >
+                                        <div class="input__wrapper">
+                                          <div
+                                            class="
+                                              g-input__wrapper
+                                              g-select__input
+                                            "
+                                            type="text"
+                                          >
+                                            <input
+                                              type=""
+                                              required
+                                              size="60"
+                                              id="name-product"
+                                              class="form-control"
+                                              :placeholder="product.name"
                                             />
                                           </div>
                                         </div>
@@ -378,7 +535,7 @@ export default {
                                               <input
                                                 type=""
                                                 name="weight_product[]"
-                                                value="0.1"
+                                                :value="product.weight"
                                                 class="form-control"
                                               />
                                             </div>
@@ -399,7 +556,7 @@ export default {
                                               <input
                                                 type=""
                                                 name="quantity_product[]"
-                                                value="1"
+                                                :value="product.quantity"
                                                 class="form-control"
                                               />
                                             </div>
@@ -421,7 +578,7 @@ export default {
                                                 type=""
                                                 name="price_product[]"
                                                 class="form-control"
-                                                value="0"
+                                                :value="product.price"
                                               />
                                             </div>
                                           </div>
@@ -435,11 +592,15 @@ export default {
                                   >
                                     <button
                                       type="button"
-                                      id="creat_ware"
-                                      class="btn btn-outline-primary ms-1"
+                                      @click="deleteRow(index)"
+                                      class="
+                                        btn btn-outline-danger
+                                        add-row
+                                        ms-1
+                                      "
                                       style="height: 100%"
                                     >
-                                      +
+                                      <i class="fa fa-trash"></i>
                                     </button>
                                   </div>
                                 </div>
