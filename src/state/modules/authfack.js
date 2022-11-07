@@ -3,11 +3,11 @@ import tokenService from "@/services/token.service"
 import axios from "axios";
 
 export const state = {
-    currentUser: tokenService.getUser()
+    currentAdmin: tokenService.getAdmin()
 }
 
 export const actions = {
-    // Logs in the user.
+    // Logs in the Admin.
     // eslint-disable-next-line no-unused-vars
     async login({ dispatch, commit }, { phone, password }) {
         try {
@@ -17,7 +17,7 @@ export const actions = {
                 dispatch('notification/error', msg, { root: true });
             }
             else {
-                tokenService.setUser(data)
+                tokenService.setAdmin(data)
                 commit('loginSuccess', data);
                 router.push('/');
             }
@@ -25,10 +25,10 @@ export const actions = {
             dispatch('notification/error', err.message, { root: true })
         }
     },
-    // Logout the user
+    // Logout the Admin
     async logout({ commit }) {
         console.log('chay logout')
-        tokenService.removeUser()
+        tokenService.removeAdmin()
         await axios.post('/auth/logout')
         commit('logout');
         router.push('/login');
@@ -37,9 +37,9 @@ export const actions = {
         tokenService.updateLocalToken(data.token, data.refreshToken)
         commit('refreshToken', data);
     },
-    // register the user
-    async registeruser({ dispatch, commit }, user) {
-        const result = await axios.post('/auth/register', user)
+    // register the Admin
+    async registerAdmin({ dispatch, commit }, Admin) {
+        const result = await axios.post('/auth/register', Admin)
         const { msg, error, data } = result.data;
         if (error) {
             dispatch('notification/error', msg, { root: true });
@@ -47,7 +47,7 @@ export const actions = {
         else {
             commit('registerSuccess', data);
             dispatch('notification/success', msg, { root: true });
-            localStorage.setItem('user', JSON.stringify(data))
+            localStorage.setItem('admin', JSON.stringify(data))
             router.push('/login');
         }
     }
@@ -55,20 +55,20 @@ export const actions = {
 
 export const getters = {
     loggedIn(state) {
-        return !!state.currentUser
+        return !!state.currentAdmin
     },
     token(state) {
         let token = ''
-        if (state.currentUser) {
-            token = state.currentUser.token
+        if (state.currentAdmin) {
+            token = state.currentAdmin.token
         }
 
         return token
     },
     refreshToken(state) {
         let rftoken = ''
-        if (state.currentUser) {
-            rftoken = state.currentUser.refreshToken
+        if (state.currentAdmin) {
+            rftoken = state.currentAdmin.refreshToken
         }
 
         return rftoken
@@ -77,16 +77,16 @@ export const getters = {
 
 export const mutations = {
     loginSuccess(state, data) {
-        state.currentUser = data;
+        state.currentAdmin = data;
     },
     logout(state) {
-        state.currentUser = null;
+        state.currentAdmin = null;
     },
     registerSuccess(state, data) {
-        state.currentUser = data;
+        state.currentAdmin = data;
     },
     refreshToken(state, data) {
-        state.currentUser = data;
+        state.currentAdmin = data;
     }
 };
 

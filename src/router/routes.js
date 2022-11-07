@@ -18,6 +18,22 @@ export default [
     component: () => import("./views/user/userIn4"),
   },
   {
+    path: "/thong-bao",
+    name: "notification",
+    meta: {
+      authRequired: true,
+    },
+    component: () => import("./views/user/noticUser"),
+  },
+  {
+    path: "/gia-han-goi-cuoc",
+    name: "renewPack",
+    meta: {
+      authRequired: true,
+    },
+    component: () => import("./views/user/renewPack"),
+  },
+  {
     path: "/tao-don-le",
     name: "order",
     meta: {
@@ -97,30 +113,6 @@ export default [
       authRequired: true,
     },
     component: () => import("./views/tables/basictable"),
-  },
-  {
-    path: "/ecm1",
-    name: "test2",
-    meta: {
-      authRequired: true,
-    },
-    component: () => import("./views/dashboards/crypto/index"),
-  },
-  {
-    path: "/ecm2",
-    name: "test3",
-    meta: {
-      authRequired: true,
-    },
-    component: () => import("./views/ui/grid"),
-  },
-  {
-    path: "/khach-hang",
-    name: "MNUsers",
-    meta: {
-      authRequired: true,
-    },
-    component: () => import("./views/user/MNUsers"),
   },
   {
     path: "/login",

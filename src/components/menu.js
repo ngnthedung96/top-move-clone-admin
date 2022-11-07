@@ -19,14 +19,14 @@ export const menuItems = [
             },
             {
                 id: 4,
-                label: 'menuitems.accounts.list.count',
-                link: '/dashboard/saas',
+                label: 'menuitems.accounts.list.notice',
+                link: '/thong-bao',
                 parentId: 2
             },
             {
                 id: 5,
-                label: 'menuitems.accounts.list.customer',
-                link: '/khach-hang',
+                label: 'menuitems.accounts.list.renewPack',
+                link: '/gia-han-goi-cuoc',
                 parentId: 2
             }
         ]

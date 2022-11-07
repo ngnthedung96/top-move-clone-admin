@@ -101,8 +101,9 @@
       "text": "Tài khoản",
       "list": {
         "userIn4": "Thông tin cá nhân",
-        "count": "Thống kê",
-        "customer": "Khách hàng"
+        "notice": "Thông báo",
+        "renewPack": "Gia hạn gói cước"
+
       }
     },
     "order": {
