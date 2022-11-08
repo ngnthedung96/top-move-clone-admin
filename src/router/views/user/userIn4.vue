@@ -24,7 +24,7 @@ export default {
     return {
       title: "Thông tin cá nhân",
       items: [
-      {
+        {
           text: "Trang chủ",
           href: "#",
         },
@@ -102,13 +102,23 @@ export default {
               </div>
               <h5>Chi tiết</h5>
               <div class="ibox-content profile-content">
-                                    <h4><strong>TEST APP</strong></h4>
-                                    <span><i class="fa fa-phone"></i>&nbsp;&nbsp;0387179999</span><br>
-                                    <span><i class="fa fa-envelope-o"></i>&nbsp;&nbsp;testapp@gmail.com</span><br>
-                                    <span><i class="fa fa-user-circle" aria-hidden="true"></i>&nbsp;&nbsp;
-                                        TÀI KHOẢN FC                                    </span><br>
-                                     <span><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;Mã bưu cục: <strong>10004</strong>                                    <hr>
-                                </span></div>
+                <h4><strong>TEST APP</strong></h4>
+                <span><i class="fa fa-phone"></i>&nbsp;&nbsp;0387179999</span
+                ><br />
+                <span
+                  ><i class="fa fa-envelope-o"></i
+                  >&nbsp;&nbsp;testapp@gmail.com</span
+                ><br />
+                <span
+                  ><i class="fa fa-user-circle" aria-hidden="true"></i
+                  >&nbsp;&nbsp; TÀI KHOẢN FC </span
+                ><br />
+                <span
+                  ><i class="fa fa-envelope" aria-hidden="true"></i
+                  >&nbsp;&nbsp;Mã bưu cục: <strong>10004</strong>
+                  <hr />
+                </span>
+              </div>
             </div>
           </div>
         </div>
@@ -227,9 +237,48 @@ export default {
                 <div class="form-group mb-3">
                   <div class="row">
                     <div id="otp_phone">
-                            <input type="text" class="form-control" placeholder="Nhập SĐT..." name="phone" id="phone"><br>
-                            <div id="recaptcha-container"><div><div style="width: 304px; height: 78px;"><div><iframe title="reCAPTCHA" src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LcMZR0UAAAAALgPMcgHwga7gY5p8QMg1Hj-bmUv&amp;co=aHR0cDovL2Jvc3NhZHMudG9wbW92ZS52bjo4MA..&amp;hl=en&amp;type=image&amp;v=Ixi5IiChXmIG6rRkjUa1qXHT&amp;theme=light&amp;size=normal&amp;cb=p4f300flybb9" width="304" height="78" role="presentation" name="a-1br45v5vfto" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div><iframe style="display: none;"></iframe></div></div>
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Nhập SĐT..."
+                        name="phone"
+                        id="phone"
+                      /><br />
+                      <div id="recaptcha-container">
+                        <div>
+                          <div style="width: 304px; height: 78px">
+                            <div>
+                              <iframe
+                                title="reCAPTCHA"
+                                src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LcMZR0UAAAAALgPMcgHwga7gY5p8QMg1Hj-bmUv&amp;co=aHR0cDovL2Jvc3NhZHMudG9wbW92ZS52bjo4MA..&amp;hl=en&amp;type=image&amp;v=Ixi5IiChXmIG6rRkjUa1qXHT&amp;theme=light&amp;size=normal&amp;cb=p4f300flybb9"
+                                width="304"
+                                height="78"
+                                role="presentation"
+                                name="a-1br45v5vfto"
+                                frameborder="0"
+                                scrolling="no"
+                                sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"
+                              ></iframe>
+                            </div>
+                            <textarea
+                              id="g-recaptcha-response"
+                              name="g-recaptcha-response"
+                              class="g-recaptcha-response"
+                              style="
+                                width: 250px;
+                                height: 40px;
+                                border: 1px solid rgb(193, 193, 193);
+                                margin: 10px 25px;
+                                padding: 0px;
+                                resize: none;
+                                display: none;
+                              "
+                            ></textarea>
+                          </div>
+                          <iframe style="display: none"></iframe>
                         </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>

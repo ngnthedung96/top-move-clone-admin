@@ -8,7 +8,7 @@ import PageHeader from "@/components/page-header";
  */
 export default {
   page: {
-    title: "Gia hạn gói cước",
+    title: "Danh sách tài khoản khách hàng",
     meta: [
       {
         name: "description",
@@ -22,18 +22,18 @@ export default {
   },
   data() {
     return {
-      title: "Gia hạn gói cước",
+      title: "Danh sách tài khoản khách hàng",
       items: [
         {
           text: "Trang chủ",
           href: "#",
         },
         {
-          text: "Tài khoản FC",
+          text: "Quản lý khách hàng",
           href: "#",
         },
         {
-          text: "Gia hạn gói cước",
+          text: "Danh sách tài khoản khách hàng",
           active: true,
         },
       ],
@@ -85,63 +85,31 @@ export default {
     </div>
     <div class="wrapper wrapper-content">
       <div class="row">
-        <div class="col-lg-3">
-          <div class="card">
-            <div class="card-body pack-in4">
-              <h5 class="card-title">Thông tin gói cước đang sử dụng</h5>
-              <div class="mt-3 pack-content">
-                <span>
-                  <b-icon-credit-card class="me-1"></b-icon-credit-card> Gói
-                  cước đang sử dụng: <strong>1 tháng</strong></span
-                ><br />
-                <span
-                  ><b-icon-clock class="me-1"></b-icon-clock>Ngày hết hạn:
-                  <strong>05-10-2030</strong></span
-                ><br />
-                <hr />
-                <div class="float-right">
-                  <b-button
-                    v-b-modal="'modal-edit-pass'"
-                    class="editbtn_pass"
-                    variant="primary  btn-sm"
-                    >Tạo phiếu gia hạn
-                    <b-icon-key rotate="125"></b-icon-key>
-                  </b-button>
-                </div>
-                <div class="clearfix"></div>
-              </div>
-              <div class="clearfix"></div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-9 animated fadeInRight">
+        <div class="col-lg-12 animated fadeInRight">
           <div class="card">
             <div class="card-body">
               <form id="formSearch" role="form">
                 <div class="mail-box-header">
-                  <h2 class="card-title">
-                    Gia hạn gói cước (<span id="total_noti">0</span>)
-                  </h2>
+                  <h2 class="card-title">Danh sách tài khoản đã đồng giá</h2>
                   <div class="ibox-content">
                     <form id="formSearch" role="form">
                       <div class="row">
-                        <div class="col-sm-2">
+                        <div class="col-md-3">
                           <select
-                            name="status"
+                            name="user_id"
                             class="
                               form-control
-                              select2_jq select2-hidden-accessible
+                              js-example-basic-single
+                              select2-hidden-accessible
                             "
-                            data-select2-id="status"
+                            data-select2-id="1"
                             tabindex="-1"
                             aria-hidden="true"
                           >
-                            <option value="0" selected="" data-select2-id="2">
-                              Tất cả lệnh
+                            <option value="0" data-select2-id="3">
+                              Chọn tài khoản
                             </option>
-                            <option value="1">Chờ duyệt</option>
-                            <option value="2">Đã duyệt</option>
-                            <option value="-1">Đã hủy</option>
+                            <option value="57">0387170011 - TESTHOP</option>
                           </select>
                         </div>
                         <div class="col-sm-2">
@@ -159,7 +127,24 @@ export default {
                       >
                         <div class="row">
                           <div class="col-sm-12 col-md-6">
-                            <div style="width: 50%">
+                            <button
+                              class="dt-button btn btn-primary"
+                              tabindex="0"
+                              aria-controls="dt_orders"
+                              type="button"
+                            >
+                              <span
+                                ><i
+                                  class="fa fa-download"
+                                  aria-hidden="true"
+                                  id="text_export_excel"
+                                ></i>
+                                Excel</span
+                              >
+                            </button>
+                          </div>
+                          <div class="col-sm-12 col-md-6">
+                            <div style="width: 29%; float: right">
                               <div
                                 class="
                                   dataTables_length
@@ -203,7 +188,6 @@ export default {
                               </div>
                             </div>
                           </div>
-                          <div class="col-sm-12 col-md-6"></div>
                         </div>
                         <div class="row">
                           <div class="col-sm-12">
@@ -222,9 +206,10 @@ export default {
                                     rowspan="1"
                                     colspan="1"
                                     aria-sort="ascending"
-                                    aria-label="Phiếu thanh toán: activate to sort column descending"
+                                    aria-label="#: activate to sort column descending"
+                                    style="width: 47px"
                                   >
-                                    Phiếu thanh toán
+                                    #
                                   </th>
                                   <th
                                     class="sorting_disabled"
@@ -232,9 +217,10 @@ export default {
                                     aria-controls="dt_orders"
                                     rowspan="1"
                                     colspan="1"
-                                    aria-label="Gói gia hạn: activate to sort column ascending"
+                                    aria-label="Tài khoản: activate to sort column ascending"
+                                    style="width: 144px"
                                   >
-                                    Gói gia hạn
+                                    Tài khoản
                                   </th>
                                   <th
                                     class="sorting_disabled"
@@ -242,9 +228,22 @@ export default {
                                     aria-controls="dt_orders"
                                     rowspan="1"
                                     colspan="1"
-                                    aria-label="Số tiền: activate to sort column ascending"
+                                    aria-label="ID: activate to sort column ascending"
+                                    style="width: 55px"
                                   >
-                                    Số tiền
+                                    ID
+                                  </th>
+                                  <th
+                                    width="30%"
+                                    class="sorting_disabled"
+                                    tabindex="0"
+                                    aria-controls="dt_orders"
+                                    rowspan="1"
+                                    colspan="1"
+                                    aria-label="Ngân hàng: activate to sort column ascending"
+                                    style="width: 385px"
+                                  >
+                                    Ngân hàng
                                   </th>
                                   <th
                                     class="sorting_disabled"
@@ -252,9 +251,10 @@ export default {
                                     aria-controls="dt_orders"
                                     rowspan="1"
                                     colspan="1"
-                                    aria-label="Hạn sử dụng đến: activate to sort column ascending"
+                                    aria-label="Chi nhánh: activate to sort column ascending"
+                                    style="width: 148px"
                                   >
-                                    Hạn sử dụng đến
+                                    Chi nhánh
                                   </th>
                                   <th
                                     class="sorting_disabled"
@@ -262,9 +262,21 @@ export default {
                                     aria-controls="dt_orders"
                                     rowspan="1"
                                     colspan="1"
-                                    aria-label="Trạng thái: activate to sort column ascending"
+                                    aria-label="Tên tài khoản: activate to sort column ascending"
+                                    style="width: 189px"
                                   >
-                                    Trạng thái
+                                    Tên tài khoản
+                                  </th>
+                                  <th
+                                    class="sorting_disabled"
+                                    tabindex="0"
+                                    aria-controls="dt_orders"
+                                    rowspan="1"
+                                    colspan="1"
+                                    aria-label="Số tài khoản: activate to sort column ascending"
+                                    style="width: 175px"
+                                  >
+                                    Số tài khoản
                                   </th>
                                 </tr>
                               </thead>

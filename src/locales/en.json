@@ -91,37 +91,34 @@
     }
   },
   "menuitems": {
-    "menu": {
-      "text": "Satistics"
-    },
-    "live": {
-      "text": "Tổng quan - LIVE"
-    },
     "accounts": {
       "text": "Tài khoản",
       "list": {
         "userIn4": "Thông tin cá nhân",
         "notice": "Thông báo",
         "renewPack": "Gia hạn gói cước"
-
       }
     },
-    "order": {
-      "text": "Tạo đơn hàng",
+    "count": {
+      "text": "Thống kê"
+    },
+    "MNUser": {
+      "text": "Quản lý khách hàng",
       "list": {
-        "order": "Tạo đơn lẻ",
-        "excelOrder": "Tạo đơn Excel",
-        "proOrder": "Tạo đơn theo sản phẩm"
+        "userList": "Danh sách tài khoản",
+        "creUser": "Tạo tài khoản",
+        "setSamePrice": "Cài đồng giá",
+        "userBankAcc": "Tài khoản ngân hàng khách hàng"
       }
     },
     "MNOrder": {
       "text": "Quản lý đơn hàng",
       "list": {
         "MNOrder": "Quản lý đơn hàng",
+        "searchOrder": "Tra cứu đơn hàng",
         "resOrder": "Quản lý phản hồi đơn hàng",
         "MNOrderByFile": "Quản lý đơn hàng tạo theo file",
-        "failOrder": "Thông báo đơn fail",
-        "storeOrder": "Kho hàng"
+        "impFileFrPartner": "Nhập đơn hàng từ File đối tác"
       }
     },
     "reconcilation": {

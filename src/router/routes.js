@@ -34,28 +34,53 @@ export default [
     component: () => import("./views/user/renewPack"),
   },
   {
-    path: "/tao-don-le",
-    name: "order",
+    path: "/thongg-ke",
+    name: "countPage",
     meta: {
       authRequired: true,
     },
-    component: () => import("./views/order/singleOrder"),
+    component: () => import("./views/count"),
+  },
+
+  {
+    path: "/danh-sach-tai-khoan",
+    name: "userList",
+    meta: {
+      authRequired: true,
+    },
+    component: () => import("./views/MNUsers/userList"),
   },
   {
-    path: "/tao-don-excel",
-    name: "excelOrder",
+    path: "/tao-tai-khoan",
+    name: "creUser",
     meta: {
       authRequired: true,
     },
-    component: () => import("./views/order/excelOrder"),
+    component: () => import("./views/MNUsers/creUser"),
   },
   {
-    path: "/tao-don-san-pham",
-    name: "proOrder",
+    path: "/quan-ly-kho-hang",
+    name: "storeOrder",
     meta: {
       authRequired: true,
     },
-    component: () => import("./views/order/proOrder"),
+    component: () => import("./views/storeOrder"),
+  },
+  {
+    path: "/cai-dong-gia",
+    name: "setSamePrice",
+    meta: {
+      authRequired: true,
+    },
+    component: () => import("./views/MNUsers/setSamePrice"),
+  },
+  {
+    path: "/tai-khoan-ngan-hang-khach-hang",
+    name: "userBankAcc",
+    meta: {
+      authRequired: true,
+    },
+    component: () => import("./views/MNUsers/userBankAcc"),
   },
   {
     path: "/quan-li-don-hang",

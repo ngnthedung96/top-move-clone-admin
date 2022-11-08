@@ -8,7 +8,7 @@ import PageHeader from "@/components/page-header";
  */
 export default {
   page: {
-    title: "Dashboard",
+    title: "Tổng quan - LIVE",
     meta: [
       {
         name: "description",
