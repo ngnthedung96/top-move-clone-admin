@@ -185,3 +185,28 @@ body {
     top: 0;
     height: 100%;
 }
+
+.b-tab-div div:has(>.nav.nav-tabs) {
+    width: 100%;
+}
+
+p {
+    margin: 0px;
+    padding: 0px
+}
+
+.at {
+    color: #6767ec !important
+}
+
+.hide {
+    display: none;
+}
+
+a {
+    color: black
+}
+
+label {
+    margin: 0
+}

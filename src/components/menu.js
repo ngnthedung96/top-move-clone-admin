@@ -28,12 +28,12 @@ export const menuItems = [
         id: 5,
         label: "menuitems.count.text",
         icon: "bx-chart",
-        link: "/thongg-ke"
+        link: "/thong-ke"
     },
     {
         id: 6,
         label: "menuitems.MNUser.text",
-        icon: "bx-cart",
+        icon: "bx-user",
         subItems: [
             {
                 id: 7,
@@ -53,12 +53,6 @@ export const menuItems = [
                 link: '/cai-dong-gia',
                 parentId: 6
             },
-            {
-                id: 10,
-                label: 'menuitems.MNUser.list.userBankAcc',
-                link: '',
-                parentId: 6
-            }
         ]
     },
     {
@@ -99,22 +93,132 @@ export const menuItems = [
         ]
     },
     {
+        id: 16,
+        label: "menuitems.MNCODPoOf.text",
+        icon: "bx-home",
+        subItems: [
+            {
+                id: 17,
+                label: 'menuitems.MNCODPoOf.list.CODShipper',
+                link: '/quan-li-cod-shipper',
+                parentId: 16
+            },
+            {
+                id: 18,
+                label: 'menuitems.MNCODPoOf.list.CODPoOf',
+                link: '/quan-li-cod-buu-cuc',
+                parentId: 16
+            },
+            {
+                id: 19,
+                label: 'menuitems.MNCODPoOf.list.imStock',
+                link: '/ton-don-nhap-kho',
+                parentId: 16
+            },
+            {
+                id: 20,
+                label: 'menuitems.MNCODPoOf.list.checkPro',
+                link: '/kiem-ke-hang-hoa',
+                parentId: 16
+            },
+            {
+                id: 21,
+                label: 'menuitems.MNCODPoOf.list.MNShip',
+                link: '/quan-li-giao-hang-shipper',
+                parentId: 16
+            },
+            {
+                id: 22,
+                label: 'menuitems.MNCODPoOf.list.pickup',
+                link: '/pickup',
+                parentId: 16
+            },
+            {
+                id: 23,
+                label: 'menuitems.MNCODPoOf.list.checkPack',
+                link: '/quan-li-kien-hang',
+                parentId: 16
+            },
+            {
+                id: 24,
+                label: 'menuitems.MNCODPoOf.list.returnOr',
+                link: '/quan-li-don-duyet',
+                parentId: 16
+            }
+        ]
+    },
+    {
         id: 19,
-        label: "menuitems.reconcilation.text",
-        icon: "bx-credit-card",
+        label: "menuitems.scanCode.text",
+        icon: "bx-barcode",
         subItems: [
             {
                 id: 20,
-                label: 'menuitems.reconcilation.list.old',
-                link: '/phieu-doi-soat',
+                label: 'menuitems.scanCode.list.getPro',
+                link: '/quet-lay-hang',
                 parentId: 19
             },
             {
                 id: 21,
-                label: 'menuitems.reconcilation.list.new',
-                link: '/phieu-doi-soat-new',
+                label: 'menuitems.scanCode.list.scImStock',
+                link: '/quet-nhap-kho',
+                parentId: 19
+            },
+            {
+                id: 22,
+                label: 'menuitems.scanCode.list.delivery',
+                link: '/quet-giao-hang',
+                parentId: 19
+            },
+            {
+                id: 23,
+                label: 'menuitems.scanCode.list.sign',
+                link: '/quet-ky-nhan',
+                parentId: 19
+            },
+            {
+                id: 24,
+                label: 'menuitems.scanCode.list.problemWPro',
+                link: '/quet-kien-hang-co-van-de',
+                parentId: 19
+            },
+            {
+                id: 25,
+                label: 'menuitems.scanCode.list.returnNotic',
+                link: '/quet-bao-hoan',
+                parentId: 19
+            },
+            {
+                id: 26,
+                label: 'menuitems.scanCode.list.scanIn4',
+                link: '/quet-thong-tin-kien-hang',
+                parentId: 19
+            },
+            {
+                id: 27,
+                label: 'menuitems.scanCode.list.giveShipper',
+                link: '/quan-li-don-duyet',
                 parentId: 19
             }
         ]
-    }
+    },
+    // {
+    //     id: 19,
+    //     label: "menuitems.reconcilation.text",
+    //     icon: "bx-credit-card",
+    //     subItems: [
+    //         {
+    //             id: 20,
+    //             label: 'menuitems.reconcilation.list.old',
+    //             link: '/phieu-doi-soat',
+    //             parentId: 19
+    //         },
+    //         {
+    //             id: 21,
+    //             label: 'menuitems.reconcilation.list.new',
+    //             link: '/phieu-doi-soat-new',
+    //             parentId: 19
+    //         }
+    //     ]
+    // }
 ];

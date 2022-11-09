@@ -34,7 +34,7 @@ export default [
     component: () => import("./views/user/renewPack"),
   },
   {
-    path: "/thongg-ke",
+    path: "/thong-ke",
     name: "countPage",
     meta: {
       authRequired: true,
@@ -91,6 +91,22 @@ export default [
     component: () => import("./views/MNOrder/MNOrder"),
   },
   {
+    path: "/tra-cuu-don-hang",
+    name: "searchOrder",
+    meta: {
+      authRequired: true,
+    },
+    component: () => import("./views/MNOrder/searchOrder"),
+  },
+  {
+    path: "/quan-li-don-tu-doi-tac",
+    name: "impFileFrPartner",
+    meta: {
+      authRequired: true,
+    },
+    component: () => import("./views/MNOrder/impFileFrPartner"),
+  },
+  {
     path: "/quan-li-phan-hoi",
     name: "resOrder",
     meta: {
@@ -114,6 +130,127 @@ export default [
     },
     component: () => import("./views/MNOrder/noticOrder"),
   },
+  {
+    path: "/quan-li-cod-shipper",
+    name: "CODShipper",
+    meta: {
+      authRequired: true,
+    },
+    component: () => import("./views/MNPoOf/CODShipper"),
+  },
+  {
+    path: "/quan-li-cod-buu-cuc",
+    name: "CODPoOf",
+    meta: {
+      authRequired: true,
+    },
+    component: () => import("./views/MNPoOf/CODPoOf"),
+  },
+  {
+    path: "/ton-don-nhap-kho",
+    name: "imStock",
+    meta: {
+      authRequired: true,
+    },
+    component: () => import("./views/MNPoOf/imStock"),
+  },
+  {
+    path: "/kiem-ke-hang-hoa",
+    name: "checkPro",
+    meta: {
+      authRequired: true,
+    },
+    component: () => import("./views/MNPoOf/checkPro"),
+  },
+  {
+    path: "/quan-li-giao-hang-shipper",
+    name: "MNShip",
+    meta: {
+      authRequired: true,
+    },
+    component: () => import("./views/MNPoOf/MNShip"),
+  },
+  {
+    path: "/pickup",
+    name: "pickup",
+    meta: {
+      authRequired: true,
+    },
+    component: () => import("./views/MNPoOf/pickup"),
+  },
+  {
+    path: "/quan-li-kien-hang",
+    name: "checkPack",
+    meta: {
+      authRequired: true,
+    },
+    component: () => import("./views/MNPoOf/checkPack"),
+  },
+  {
+    path: "/quan-li-don-duyet",
+    name: "returnOr",
+    meta: {
+      authRequired: true,
+    },
+    component: () => import("./views/MNPoOf/returnOr"),
+  },
+  {
+    path: "/quet-lay-hang",
+    name: "scGetPro",
+    meta: {
+      authRequired: true,
+    },
+    component: () => import("./views/scanCode/scGetPro"),
+  },
+  {
+    path: "/quet-nhap-kho",
+    name: "scImStock",
+    meta: {
+      authRequired: true,
+    },
+    component: () => import("./views/scanCode/scImStock"),
+  },
+  {
+    path: "/quet-giao-hang",
+    name: "scDelivery",
+    meta: {
+      authRequired: true,
+    },
+    component: () => import("./views/scanCode/scDelivery"),
+  },
+  {
+    path: "/quet-ky-nhan",
+    name: "scSign",
+    meta: {
+      authRequired: true,
+    },
+    component: () => import("./views/scanCode/scSign"),
+  },
+  {
+    path: "/quet-kien-hang-co-van-de",
+    name: "scSign",
+    meta: {
+      authRequired: true,
+    },
+    component: () => import("./views/scanCode/scProblemWPro"),
+  },
+  {
+    path: "/quet-bao-hoan",
+    name: "scSign",
+    meta: {
+      authRequired: true,
+    },
+    component: () => import("./views/scanCode/scReturnNotic"),
+  },
+  {
+    path: "/quet-thong-tin-kien-hang",
+    name: "scSign",
+    meta: {
+      authRequired: true,
+    },
+    component: () => import("./views/scanCode/scanIn4"),
+  },
+
   {
     path: "/phieu-doi-soat",
     name: "recoPage",

@@ -121,6 +121,32 @@
         "impFileFrPartner": "Nhập đơn hàng từ File đối tác"
       }
     },
+    "MNCODPoOf": {
+      "text": "QLDL bưu cục",
+      "list": {
+        "CODShipper": "QL COD SHIPPER",
+        "CODPoOf": "QL COD bưu cục",
+        "imStock": "Tồn đơn nhập kho",
+        "checkPro": "Kiểm kê hàng hóa",
+        "MNShip": "QL giao hàng SHIPPER",
+        "pickup": "Triển khai PICKUP",
+        "checkPack": "Quản lý kiện hàng",
+        "returnOr": "Quản lý đơn trả duyệt"
+      }
+    },
+    "scanCode": {
+      "text": "Quét mã vạch",
+      "list": {
+        "getPro": "Lấy hàng",
+        "scImStock": "Nhập kho",
+        "delivery": "Giao hàng",
+        "sign": "Ký nhận",
+        "problemWPro": "Kiện hàng có vấn đề",
+        "returnNotic": "Báo hoàn",
+        "scanIn4": "Quét thông tin đơn hàng",
+        "giveShipper": "Chuyển đơn giao Shipper"
+      }
+    },
     "reconcilation": {
       "text": "Đối soát",
       "list": {

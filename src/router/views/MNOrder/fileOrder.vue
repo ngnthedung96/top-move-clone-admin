@@ -65,9 +65,38 @@ export default {
                 <div class="card-content border-bottom border-black p-2">
                   <h5 class="card-title">Danh sách file đơn hàng</h5>
                 </div>
-                <div class="card-content border-bottom border-black p-2">
-                  <h5 class="card-title">Chưa có file đơn hàng được tạo</h5>
+                <div
+                  class="
+                    feed-activity-list
+                    file_upload_list
+                    border-bottom border-black
+                  "
+                >
+                  <div class="row feed-element" id="410">
+                    <div>
+                      <small class="text-success" style="float: right"
+                        >31-08-2022 00:58</small
+                      ><strong>TESTHOP</strong>
+                      <div>
+                        <b-icon-file-earmark-excel></b-icon-file-earmark-excel>
+                        create_excel_v5.xlsx_2_31-08-2022 00:58
+                      </div>
+                      <br /><small class="text-muted" style="float: right"
+                        >2 đơn</small
+                      ><br /><small
+                        class="badge bg-primary"
+                        style="float: right; font-size: 100%"
+                        >Shop trả phí giao hàng</small
+                      >
+                      <div>
+                        <label class="badge bg-success" style="font-size: 100%"
+                          >Đã xử lý</label
+                        >
+                      </div>
+                    </div>
+                  </div>
                 </div>
+
                 <div class="clearfix"></div>
               </div>
             </div>
@@ -121,7 +150,6 @@ export default {
                       id="DataTables_Table_0"
                       aria-describedby="DataTables_Table_0_info"
                       role="grid"
-                      style="width: 970px"
                     >
                       <thead>
                         <tr role="row">
@@ -168,9 +196,92 @@ export default {
                         </tr>
                       </thead>
                       <tbody id="body_detail_file_id">
-                        <tr class="odd">
-                          <td valign="top" colspan="5" class="dataTables_empty">
-                            Không có dữ liệu
+                        <tr id="row_29098" role="row" class="odd">
+                          <td style="width: 5%">1</td>
+                          <td style="width: 20%">
+                            <div>
+                              Mã đơn:
+                              <strong
+                                ><label
+                                  style="
+                                    color: #e1293d !important;
+                                    font-weight: 700 !important;
+                                  "
+                                  >84856514557397</label
+                                ></strong
+                              >
+                            </div>
+                            <div style="word-break: break-all">
+                              Mã đơn KH: <strong></strong>
+                            </div>
+                            <div>Tên SP: <strong>áo</strong></div>
+                            <div>Ghi chú: <strong>ghi chu day nay</strong></div>
+                            <div>
+                              Loại hàng:
+                              <strong>1_Cho Xem Hàng, Không Cho Thử</strong>
+                            </div>
+                            <br />
+                            <div>
+                              <label class="label label-primary"
+                                >Đã xử lý</label
+                              >
+                            </div>
+                          </td>
+                          <td style="width: 25%">
+                            <div>Tên: <strong>tunguyen</strong></div>
+                            <div>SĐT: <strong>0387170022</strong></div>
+                            <hr />
+                            <div>
+                              Chi tiết:
+                              <strong
+                                >lương quy, xuân nộn, đông anh, hà nội</strong
+                              >
+                            </div>
+                            <div>
+                              Xã/Phường: <strong>_457_Xã Xuân Nộn</strong>
+                            </div>
+                            <div>
+                              Quận/Huyện: <strong>_17_Huyện Đông Anh</strong>
+                            </div>
+                            <div>
+                              Tỉnh/Thành Phố:
+                              <strong>_1_Thành phố Hà Nội</strong>
+                            </div>
+                          </td>
+                          <td style="width: 15%">
+                            <div>Phí thu hộ: <strong>200,000 đ</strong></div>
+                            <div>Giá trị: <strong>100,000 đ</strong></div>
+                            <hr />
+                            <div>Khối lượng: <strong>0 gr</strong></div>
+                            <div>Chiều dài: <strong>0 cm</strong></div>
+                            <div>Chiều rộng: <strong>0 cm</strong></div>
+                            <div>Chiều cao: <strong>0 cm</strong></div>
+                          </td>
+                          <td style="width: 15%">
+                            <div>Tạo: <strong>31-08-2022 00:58</strong></div>
+                            <div>Xử lý: <strong>31-08-2022 00:58</strong></div>
+                            <div>
+                              Đẩy đơn: <strong>31-08-2022 00:58</strong>
+                            </div>
+                            <br />
+                            <div>
+                              <strong class="label label-primary"
+                                >Đẩy đơn thành công!</strong
+                              >
+                              <div>
+                                <br />
+                                <button
+                                  class="
+                                    btn btn-outline-danger btn-sm
+                                    go_order_mng
+                                  "
+                                  id="code_84856514557397"
+                                >
+                                  <i class="fa fa-paper-plane"></i> Tới đơn hàng
+                                  này
+                                </button>
+                              </div>
+                            </div>
                           </td>
                         </tr>
                       </tbody>

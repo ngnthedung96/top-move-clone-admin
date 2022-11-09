@@ -85,7 +85,7 @@ export default {
                   <div class="row nav-link">
                     <div class="col-lg-12">
                       <div class="row">
-                        <div class="col-sm-3 m-b-xs">
+                        <div class="col-sm-3 m-b-xs mt-3">
                           <div class="input-group">
                             <input
                               type="text"
@@ -95,7 +95,7 @@ export default {
                             />
                           </div>
                         </div>
-                        <div class="col-sm-3 m-b-xs conditional">
+                        <div class="col-sm-3 m-b-xs conditional mt-3">
                           <textarea
                             type="text"
                             class="form-control"
@@ -113,13 +113,34 @@ export default {
                             style="display: none"
                           />
                         </div>
-                        <input
-                          type="hidden"
-                          id="order_type_id"
-                          value="1"
-                          name="order_type"
-                        />
-                        <div class="col-sm-2 m-b-xs">
+                        <div class="col-sm-3 m-b-xs mt-3">
+                          <select
+                            name="area_search"
+                            id="area_search"
+                            class="
+                              form-control
+                              select_jq
+                              select2-hidden-accessible
+                            "
+                            data-select2-id="area_search"
+                            tabindex="-1"
+                            aria-hidden="true"
+                          >
+                            <option value="all" data-select2-id="4">
+                              Toàn Quốc
+                            </option>
+                            <option value="1" data-select2-id="22">
+                              Miền Bắc
+                            </option>
+                            <option value="2" data-select2-id="23">
+                              Miền Trung
+                            </option>
+                            <option value="3" data-select2-id="24">
+                              Miền Nam
+                            </option>
+                          </select>
+                        </div>
+                        <div class="col-sm-2 m-b-xs mt-3">
                           <select
                             name="search_for_ctr"
                             id="search_for_ctr"
@@ -146,7 +167,32 @@ export default {
                             </option>
                           </select>
                         </div>
-                        <div class="col-sm-2 m-b-xs">
+                        <div class="col-sm-3 m-b-xs mt-3">
+                          <select
+                            name="search_partner"
+                            id="search_partner"
+                            class="
+                              form-control
+                              select_jq
+                              select2-hidden-accessible
+                            "
+                            data-select2-id="search_partner"
+                            tabindex="-1"
+                            aria-hidden="true"
+                          >
+                            <option value="all" data-select2-id="8">
+                              Tất cả ĐVVC
+                            </option>
+                            <option value="bestfc">Bưu cục</option>
+                            <option value="bestinc">BEST EXPRESS</option>
+                            <option value="ninjavan">NINJAVAN</option>
+                            <option value="vtpost">VIETTEL POST</option>
+                            <option value="giaohangtietkiem">GHTK</option>
+                            <option value="jtexpress">J&amp;T EXPRESS</option>
+                            <option value="giaohangnhanh">GHN</option>
+                          </select>
+                        </div>
+                        <div class="col-sm-2 m-b-xs mt-3">
                           <select
                             name="print_status"
                             id="print_status"
@@ -166,7 +212,29 @@ export default {
                             <option value="1">Đã in</option>
                           </select>
                         </div>
-                        <div class="col-sm-2 m-b-xs">
+                        <div class="col-sm-2 m-b-xs mt-3">
+                          <select
+                            name="search_chanel"
+                            id="search_chanel"
+                            class="
+                              form-control
+                              select_jq
+                              select2-hidden-accessible
+                            "
+                            data-select2-id="search_chanel"
+                            tabindex="-1"
+                            aria-hidden="true"
+                          >
+                            <option value="99" data-select2-id="12">
+                              Tất cả - Kênh lên đơn
+                            </option>
+                            <option value="0">Tạo lẻ</option>
+                            <option value="1">APP MOBILE</option>
+                            <option value="2">Lên Excel</option>
+                            <option value="3">API đối tác</option>
+                          </select>
+                        </div>
+                        <div class="col-sm-2 m-b-xs mt-3">
                           <select
                             name="payer"
                             id="payer"
@@ -206,6 +274,34 @@ export default {
                             <option value="2">Gửi tại bưu cục</option>
                           </select>
                         </div>
+                        <div class="col-sm-5 m-b-xs mt-3">
+                          <select
+                            name="type_pick"
+                            id="type_pick"
+                            class="
+                              form-control
+                              select_jq
+                              select2-hidden-accessible
+                            "
+                            data-select2-id="type_pick"
+                            tabindex="-1"
+                            aria-hidden="true"
+                          >
+                            <option value="all" data-select2-id="8">
+                              Lựa chọn tài khoản khách hàng
+                            </option>
+                            <option value="1">
+                              TESTHOP | 10004 | 0387170011
+                            </option>
+                            <option value="2">
+                              Hương Test | 10004 | 0867628299
+                            </option>
+                            <option value="2">
+                              jamina | 10004 | 0364648286
+                            </option>
+                          </select>
+                        </div>
+
                         <div class="col-sm-2 conditional mt-3">
                           <button class="btn btn-primary" type="submit">
                             <i class="fa fa-search" aria-hidden="true"></i>
