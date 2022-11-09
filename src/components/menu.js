@@ -197,9 +197,35 @@ export const menuItems = [
             {
                 id: 27,
                 label: 'menuitems.scanCode.list.giveShipper',
-                link: '/quan-li-don-duyet',
+                link: '/chuyen-don-giao-shipper',
                 parentId: 19
             }
+        ]
+    },
+    {
+        id: 27,
+        label: "menuitems.scanAll.text",
+        icon: "bx-check",
+        subItems: [
+            {
+                id: 20,
+                label: 'menuitems.scanAll.list.scsgetPro',
+                link: '/chon-quet-lay-hang-hang-loat',
+                parentId: 27
+            },
+            {
+                id: 21,
+                label: 'menuitems.scanAll.list.scsImStock',
+                link: '/chon-nhap-kho-hang-loat',
+                parentId: 27
+            },
+            {
+                id: 22,
+                label: 'menuitems.scanAll.list.scsPartner',
+                link: '/chon-day-doi-tac-hang-loat',
+                parentId: 27
+            }
+            
         ]
     },
     // {

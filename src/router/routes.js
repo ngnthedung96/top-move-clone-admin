@@ -250,6 +250,38 @@ export default [
     },
     component: () => import("./views/scanCode/scanIn4"),
   },
+  {
+    path: "/chuyen-don-giao-shipper",
+    name: "scGiveShipper",
+    meta: {
+      authRequired: true,
+    },
+    component: () => import("./views/scanCode/scGiveShipper"),
+  },
+  {
+    path: "/chon-quet-lay-hang-hang-loat",
+    name: "scsgetPro",
+    meta: {
+      authRequired: true,
+    },
+    component: () => import("./views/scanMore/scsgetPro"),
+  },
+  {
+    path: "/chon-nhap-kho-hang-loat",
+    name: "scsImStock",
+    meta: {
+      authRequired: true,
+    },
+    component: () => import("./views/scanMore/scsImStock"),
+  },
+  {
+    path: "/chon-day-doi-tac-hang-loat",
+    name: "scsImStock",
+    meta: {
+      authRequired: true,
+    },
+    component: () => import("./views/scanMore/scsPartner"),
+  },
 
   {
     path: "/phieu-doi-soat",

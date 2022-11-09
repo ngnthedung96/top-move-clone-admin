@@ -147,6 +147,14 @@
         "giveShipper": "Chuyển đơn giao Shipper"
       }
     },
+    "scanAll": {
+      "text": "Chọn quét hàng loạt",
+      "list": {
+        "scsgetPro": "Lấy hàng",
+        "scsImStock": "Nhập kho",
+        "scsPartner": "Đẩy đối tác"
+      }
+    },
     "reconcilation": {
       "text": "Đối soát",
       "list": {
